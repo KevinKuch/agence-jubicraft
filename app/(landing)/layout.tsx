@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Navbar from "./_components/navbar";
+
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
