@@ -1,9 +1,13 @@
-const TalentLayout = () => {
-	return ( 
+const TalentLayout = ({
+	children
+}: {
+	children: React.ReactNode;
+}) => {
+	return (
 		<div>
-			<h1>Page des talents</h1>
+			{children}
 		</div>
-	 );
+	)
 }
  
 export default TalentLayout;

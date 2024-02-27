@@ -1,9 +1,13 @@
-const ProjetLayout = () => {
-	return ( 
+const ProjetLayout = ({
+	children
+}: {
+	children: React.ReactNode;
+}) => {
+	return (
 		<div>
-			<h1>Page de projet</h1>
+			{children}
 		</div>
-	 );
+	)
 }
  
 export default ProjetLayout;

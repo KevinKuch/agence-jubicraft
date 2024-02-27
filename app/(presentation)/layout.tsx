@@ -1,9 +1,13 @@
-const PresentationLayout = () => {
-	return ( 
+const PresentationLayout = ({
+	children
+}: {
+	children: React.ReactNode;
+}) => {
+	return (
 		<div>
-			<h1>Page de presentation oral</h1>
+			{children}
 		</div>
-	 );
+	)
 }
  
 export default PresentationLayout;

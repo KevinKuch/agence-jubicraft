@@ -1,9 +1,13 @@
-const ContactLayout = () => {
-	return ( 
+const ContactLayout = ({
+	children
+}: {
+	children: React.ReactNode;
+}) => {
+	return (
 		<div>
-			<h1>Page de contact</h1>
+			{children}
 		</div>
-	 );
+	)
 }
  
 export default ContactLayout;
