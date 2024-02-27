@@ -24,6 +24,7 @@ const config = {
 			// 	}
 			// },
 			colors: {
+				'accents-purple': '#6E05E6',
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",

@@ -4,18 +4,20 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
 	return (
-		<div className="max-w-3xl space-y-4">
-			<h1 className="text-3xl font-bold sm:text-5xl md:text-6xl">CRÉATIVITÉ,</h1>
-			<h1 className="text-3xl font-bold sm:text-5xl md:text-6xl">
-				UN VISIONNEMENT
+		<div className="h-full max-w-5xl space-y-4">
+			<h1 className="text-3xl font-bold sm:text-6xl md:text-7xl">CRÉATIVITÉ,</h1>
+			<h1 className="text-4xl font-bold sm:text-7xl md:text-8xl">
+				VISIONNEMENT
 			</h1>
-			<h1 className="text-3xl font-bold sm:text-5xl md:text-6xl">CAPTIVANT</h1>
-			<h3 className="text-skin-base sm:text-xl md:text-2xl font-medium">
+			<h1 className="text-3xl font-bold sm:text-6xl md:text-7xl">CAPTIVANT</h1>
+			<h3 className="sm:text-3xl md:text-4xl font-medium py-10">
 				Agence de création évenementielle
 			</h3>
-			<Button className="" variant="outline">Conception</Button>
-			<Button variant="outline">Convaincant</Button>
-			<Button variant="outline">Visuelle</Button>
+			<div className="flex justify-center gap-x-6">
+				<p className="border-2 border-[#6E05E6] rounded-full p-4">Conception</p>
+				<p className="border-2 border-[#6E05E6] rounded-full p-4">Convaincant</p>
+				<p className="border-2 border-[#6E05E6] rounded-full p-4">Visuelle</p>
+			</div>
 		</div>
 	);
 };
