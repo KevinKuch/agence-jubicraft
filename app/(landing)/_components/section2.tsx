@@ -7,13 +7,27 @@ import Image2 from '../../../public/image2.jpg'
 import Image3 from '../../../public/image3.jpg'
 import Image4 from '../../../public/image4.jpg'
 import Image5 from '../../../public/image5.jpg'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import Lenis from '@studio-freight/lenis'
 import { useScroll, useTransform, motion } from 'framer-motion'
 
 
 
 
 const SectionImages = () => {
+
+	// Lenis scroll animation pour un effect de smooth
+	// https://github.com/darkroomengineering/lenis
+	useEffect( () => {
+    const lenis = new Lenis()
+   
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+},[])
 
 	const container = useRef(null)
 	// On utilise useScroll (framer-motion) pour observer le défilement de la page
@@ -62,13 +76,14 @@ const SectionImages = () => {
 		<div ref={container} className={`${styles.container} h-300 bg-red-800`}>
 			<div className={styles.sticky}>
 				{
+					// On map les images pour les afficher
 					images.map(({src, scale}, index) => {
 						return <div key={index} className={styles.element}>
 						<motion.div style={{scale}} className={styles.imageContainer}>
 							<Image
 								src={src}
 								fill
-								alt='image1'
+								alt='images'
 								placeholder='blur'
 							/>
 						</motion.div>
