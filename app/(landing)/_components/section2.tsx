@@ -14,7 +14,7 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 
 
 
-const SectionImages = () => {
+const Section2 = () => {
 
 	// Lenis scroll animation pour un effect de smooth
 	// https://github.com/darkroomengineering/lenis
@@ -40,7 +40,7 @@ const SectionImages = () => {
 
 	// L'image est de 25vw et 25vh, donc on le multiplie par 4 pour qu'elle prenne toute la hauteur de l'écran
 	// [0, 1] est la plage de défilement
-	// [1, 4] est la plage de transformation en scale
+	// [1, 4] est la plage de transformation en scale, on peut mettre n'importe quelle valeur
 	const scaleImage1 = useTransform(scrollYProgress, [0, 1], [1, 4])
 	const scaleImage2 = useTransform(scrollYProgress, [0, 1], [1, 5]);
 	const scaleImage3 = useTransform(scrollYProgress, [0, 1], [1, 6]);
@@ -59,35 +59,43 @@ const SectionImages = () => {
     },
     {
         src: Image3,
-        scale: scaleImage1
+        scale: scaleImage2
     },
 		{
 				src: Image4,
-				scale: scaleImage1
+				scale: scaleImage5
 		},
 		{
 				src: Image5,
-				scale: scaleImage1
+				scale: scaleImage4
 		}
 
 ]
 
 	return ( 
-		<div ref={container} className={`${styles.container} h-300 bg-red-800`}>
+		<div ref={container} className={`${styles.container} h-300`}>
+			<div className="absolute top-0 -z-10 h-full w-full">
+				<div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#ad6df480] opacity-50 blur-[80px]"></div>
+				<div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[100%] translate-y-[80%] rounded-full bg-[#6dc9f4db] opacity-50 blur-[80px]"></div>
+				<div className="absolute bottom-auto left-0 right-auto top-0 h-[500px] w-[500px] -translate-x-[10%] translate-y-[80%] rounded-full bg-[#FCBEE8] opacity-50 blur-[80px]"></div>
+				<div className="absolute bottom-auto left-0 right-auto top-0 h-[500px] w-[500px] -translate-x-[5%] translate-y-[20%] rounded-full bg-[#5DE990] opacity-50 blur-[80px]"></div>
+			</div>
 			<div className={styles.sticky}>
 				{
 					// On map les images pour les afficher
 					images.map(({src, scale}, index) => {
-						return <div key={index} className={styles.element}>
-						<motion.div style={{scale}} className={styles.imageContainer}>
+						// On utilise motion.div pour animer les images
+						// On utilise scale pour animer le scale de l'image sur les parents
+						return <motion.div style={{scale}} key={index} className={styles.element}>
+						<div className={styles.imageContainer}>
 							<Image
 								src={src}
 								fill
 								alt='images'
 								placeholder='blur'
 							/>
-						</motion.div>
-					</div>
+						</div>
+					</motion.div>
 					})
 				}
 			</div>
@@ -95,4 +103,4 @@ const SectionImages = () => {
 	 );
 }
  
-export default SectionImages;
+export default Section2;

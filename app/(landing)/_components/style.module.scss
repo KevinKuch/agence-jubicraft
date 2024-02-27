@@ -6,7 +6,6 @@
 		position: sticky;
 		top: 0px;
 		height: 100vh;
-		background-color: orange;
 	}
 
 	.element {
@@ -28,7 +27,7 @@
 				object-fit: cover;
 			}
 		}
-		&:nth-of-type(2) {
+		&:nth-of-type(4) {
 			.imageContainer {
 				top:35vh;
 				left:5vw;
@@ -44,7 +43,7 @@
 				height: 25vh;
 			}
 		}
-		&:nth-of-type(4) {
+		&:nth-of-type(2) {
 			.imageContainer {
 				top:-28vh;
 				left:0;
