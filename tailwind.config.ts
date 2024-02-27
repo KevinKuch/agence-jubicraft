@@ -18,6 +18,10 @@ const config = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				'trirong': ['Trirong', 'serif'],
+				'telex': ['Telex', 'sans-serif'],
+			},
 			// textColor: {
 			// 	skin: {
 			// 		base: 'var(--color-text-base)',
