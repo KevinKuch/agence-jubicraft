@@ -12,8 +12,24 @@ const font = Trirong({
 
 export const Logo = () => {
 	return (
-		<div className="md:flex items-center gap-x-2">
-			<Image src="/logo-jc.svg" height="100" width="100" alt="Logo" />
+		<div>
+			{/* Utilise le logo noir en theme clair */}
+			<Image 
+				className="dark:hidden"
+				src="/jc-logo-dark.svg" 
+				height="100" 
+				width="100" 
+				alt="Jubilee Craft Logo" 
+			/>
+
+			{/* Utilise le logo blanc en theme sombre */}
+			<Image 
+				className="hidden dark:block"
+				src="/jc-logo-light.svg" 
+				height="100" 
+				width="100" 
+				alt="Jubilee Craft Logo" 
+			/>
 		</div>
 	);
 };

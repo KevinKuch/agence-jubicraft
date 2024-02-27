@@ -18,6 +18,11 @@ const config = {
 			},
 		},
 		extend: {
+			// textColor: {
+			// 	skin: {
+			// 		base: 'var(--color-text-base)',
+			// 	}
+			// },
 			colors: {
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
