@@ -1,11 +1,9 @@
-"use client";
-
 const ContactPage = () => {
 	return ( 
 		<div>
-			Ceci est la page de contact
+			<h1>Contact</h1>
 		</div>
 	 );
 }
-
+ 
 export default ContactPage;
