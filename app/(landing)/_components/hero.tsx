@@ -30,11 +30,11 @@ export const Hero = () => {
 				<h3 className="sm:text-3xl md:text-4xl font-medium py-10">
 					Agence de création évenementielle
 				</h3>
-				{/* <div className="flex justify-center gap-x-6">
+				<div className="flex justify-center gap-x-6">
 					<p className="border-2 border-[#6E05E6] rounded-full p-4">Conception</p>
 					<p className="border-2 border-[#6E05E6] rounded-full p-4">Convaincant</p>
 					<p className="border-2 border-[#6E05E6] rounded-full p-4">Visuelle</p>
-				</div> */}
+				</div>
 			</motion.div>
 		</div>
 	);
