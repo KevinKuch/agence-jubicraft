@@ -6,6 +6,7 @@
 		position: sticky;
 		top: 0px;
 		height: 100vh;
+		overflow: hidden;
 	}
 
 	.element {
@@ -22,9 +23,11 @@
 			width: 25vw;
 			height: 25vh;
 			position: relative;
+			
 
 			img {
 				object-fit: cover;
+				
 			}
 		}
 		&:nth-of-type(4) {
