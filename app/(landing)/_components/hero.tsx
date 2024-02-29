@@ -36,10 +36,10 @@ export const Hero = () => {
 				variants={variant1}
 				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col border border-red-500 justify-center items-center"
 			>
-				<h1 className="font-bold uppercase font-trirong text-3xl sm:text-5xl md:text-6xl lg:text-7xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem]">Créativité,</h1>
-				<h1 className="font-bold uppercase font-rubik text-3xl sm:text-6xl md:text-7xl lg:text-8xl lg:pr-[4rem]  2xl:text-[10rem] 2xl:pr-[1rem] bg-[pink] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
-				<h1 className="font-bold uppercase font-trirong text-3xl sm:text-5xl md:text-6xl lg:text-7xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem]">Impeccable</h1>
-				<h3 className="sm:text-3xl md:text-4xl font-medium pt-32">
+				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem]">Créativité,</h1>
+				<h1 className="font-bold uppercase font-rubik text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] bg-[#CCE9FF] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
+				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem]">Impéccable</h1>
+				<h3 className="sm:text-3xl font-medium pt-[3rem]">
 					Agence de création évenementielle
 				</h3>
 			</motion.div>

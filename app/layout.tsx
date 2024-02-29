@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Telex } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navbar from "../components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const telex = Telex({ 
+	subsets: ["latin"],
+	weight: ['400'], 
+});
 
 export const metadata: Metadata = {
 	title: "Agence JubiCraft",
@@ -33,7 +36,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={telex.className}>
 			{/* Provenant du shadcn Theme du /components/providers/theme-provider.tsx */}
 			<ThemeProvider
 			attribute="class"

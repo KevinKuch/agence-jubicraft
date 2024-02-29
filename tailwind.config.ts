@@ -14,22 +14,25 @@ const config = {
 			center: true,
 			padding: "2rem",
 			screens: {
-				"1xl": "1400px",
 			},
 		},
 		extend: {
+			screens: {
+				"1xl": "1400px",
+				"xsm": "400px",
+			},
+
 			fontFamily: {
 				'trirong': ['Trirong', 'serif'],
 				'telex': ['Telex', 'sans-serif'],
 				'rubik': ['Rubik Moonrocks', 'sans-serif'],
 			},
-			// textColor: {
-			// 	skin: {
-			// 		base: 'var(--color-text-base)',
-			// 	}
-			// },
+			textColor: {
+				skin: {
+					base: '	#613870',
+				}
+			},
 			colors: {
-				'accents-purple': '#6E05E6',
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
