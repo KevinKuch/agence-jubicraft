@@ -14,13 +14,14 @@ const config = {
 			center: true,
 			padding: "2rem",
 			screens: {
-				"2xl": "1400px",
+				"1xl": "1400px",
 			},
 		},
 		extend: {
 			fontFamily: {
 				'trirong': ['Trirong', 'serif'],
 				'telex': ['Telex', 'sans-serif'],
+				'rubik': ['Rubik Moonrocks', 'sans-serif'],
 			},
 			// textColor: {
 			// 	skin: {
