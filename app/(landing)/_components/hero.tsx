@@ -7,7 +7,11 @@ import { motion } from "framer-motion";
 export const Hero = () => {
 
 	const variant1 = {
+		// On définit les propriétés de l'animation 
+		// lorsqu'elle est cachée
 		hidden: { opacity: 0, x: -100 },
+		// On définit les propriétés de l'animation
+		// lorsqu'elle est visible
 		visible: { opacity: 1, x: 0 }
 	};
 
@@ -18,22 +22,25 @@ export const Hero = () => {
 
 	const popupText = ["Visuelle", "Créative", "Innovante", "Inspirante", "Époustouflante", "Éblouissante", "Élégante"]
 	
-	// let tl = gsap.timeline({ 
-	// 	yoyo: true,
-	// });
+	// On crée une timeline avec gsap
+	let tl = gsap.timeline({ 
+		repeat: -1, // -1 signifie que l'animation se répète à l'infini
+		yoyo: true, // yoyo signifie que l'animation se joue en sens inverse
+	});
 
-	// // Animation de la popUp text
-	// tl.set("#popup", {
-	// 	scale:0,
-	// 	transformOrigin: "50% 50%",
-	// })
+	// Animation de la popUp text
+	tl.set("#popup", {
+		scale:0, // On met l'échelle à 0 pour que la popUp soit invisible
+		transformOrigin: "50% 50%", // On définit le point de transformation
+	})
 
-	// tl.to("#popup", {
-	// 	scale:1,
-	// 	duration: 5,
-	// 	ease: "bounce.out",
-	// 	rotate: 360,
-	// })
+	// On anime la popUp
+	tl.to("#popup", {
+		scale:1, // On met l'échelle à 1 pour que la popUp soit visible
+		duration: 5, // On définit la durée de l'animation
+		ease: "bounce.out", // On définit l'ease de l'animation
+		rotate: 360, // On fait tourner la popUp de 360 degrés
+	})
 
 	return (
 		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem]`}>
