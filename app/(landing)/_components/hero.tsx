@@ -1,5 +1,6 @@
 "use client";
 
+import gsap from "gsap";
 import  style  from "./style.module.scss";
 import { motion } from "framer-motion";
 
@@ -14,7 +15,25 @@ export const Hero = () => {
 		hidden: { opacity: 0, y: -100 },
 		visible: { opacity: 1, y: 0 }
 	};
+
+	const popupText = ["Visuelle", "Créative", "Innovante", "Inspirante", "Époustouflante", "Éblouissante", "Élégante"]
 	
+	// let tl = gsap.timeline({ 
+	// 	yoyo: true,
+	// });
+
+	// // Animation de la popUp text
+	// tl.set("#popup", {
+	// 	scale:0,
+	// 	transformOrigin: "50% 50%",
+	// })
+
+	// tl.to("#popup", {
+	// 	scale:1,
+	// 	duration: 5,
+	// 	ease: "bounce.out",
+	// 	rotate: 360,
+	// })
 
 	return (
 		<div className={`${style.main} h-screen w-screen space-y-4 pt-[8rem]`}>
@@ -34,7 +53,7 @@ export const Hero = () => {
 				initial="hidden"
 				whileInView="visible"
 				variants={variant1}
-				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col border border-red-500 justify-center items-center"
+				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col justify-center items-center"
 			>
 				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem]">Créativité,</h1>
 				<h1 className="font-bold uppercase font-rubik text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] bg-[#CCE9FF] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
@@ -43,6 +62,18 @@ export const Hero = () => {
 					Agence de création évenementielle
 				</h3>
 			</motion.div>
+			<div className={`${style.popupContainer} flex justify-center items-center text-xs sm:text-sm lg:text-md font-bold`}>
+				{/* map the popup text */}
+				<div className={`${style.popupElement}`}>
+				{popupText.map((text, index) => {
+					return (
+						<p id="popup" className={`${style.popup} border-2 border-[#613870] rounded-[2rem] lg:p-3`}>
+							{text}
+						</p>
+					)
+				})}
+				</div>
+			</div>
 		</div>
 	);
 };
