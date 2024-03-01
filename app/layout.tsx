@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Telex } from "next/font/google";
+import { Telex } from "@next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navbar from "../components/navbar";

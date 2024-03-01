@@ -26,6 +26,7 @@ const config = {
 				'trirong': ['Trirong', 'serif'],
 				'telex': ['Telex', 'sans-serif'],
 				'rubik': ['Rubik Moonrocks', 'sans-serif'],
+				'rubik-doodle': ['Rubik Doodle Shadow', 'system-ui'],
 			},
 			textColor: {
 				skin: {

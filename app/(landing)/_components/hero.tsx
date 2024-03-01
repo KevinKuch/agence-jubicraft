@@ -56,7 +56,7 @@ export const Hero = () => {
 				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col justify-center items-center"
 			>
 				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem]">Créativité,</h1>
-				<h1 className="font-bold uppercase font-rubik text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] bg-[#CCE9FF] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
+				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] bg-[#CCE9FF] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
 				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem]">Impéccable</h1>
 				<h3 className="sm:text-3xl font-medium pt-[3rem]">
 					Agence de création évenementielle
@@ -67,7 +67,7 @@ export const Hero = () => {
 				<div className={`${style.popupElement}`}>
 				{popupText.map((text, index) => {
 					return (
-						<p id="popup" className={`${style.popup} border-2 border-[#613870] rounded-[2rem] lg:p-3`}>
+						<p id="popup" key={index} className={`${style.popup} border-2 border-[#613870] rounded-[2rem] lg:p-3`}>
 							{text}
 						</p>
 					)

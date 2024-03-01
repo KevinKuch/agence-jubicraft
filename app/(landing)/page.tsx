@@ -8,7 +8,7 @@ const LandingPage = () => {
 		<div>
 			<Hero />
 			<Section2 />
-			<Section3 />
+			{/* <Section3 /> */}
 		</div>
 	);
 };
