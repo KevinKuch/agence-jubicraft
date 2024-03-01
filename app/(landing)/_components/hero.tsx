@@ -30,16 +30,16 @@ export const Hero = () => {
 
 	// Animation de la popUp text
 	tl.set("#popup", {
-		scale:0, // On met l'échelle à 0 pour que la popUp soit invisible
+		scale:0.5, // On met l'échelle à 0 pour que la popUp soit invisible
 		transformOrigin: "50% 50%", // On définit le point de transformation
 	})
 
 	// On anime la popUp
 	tl.to("#popup", {
 		scale:1, // On met l'échelle à 1 pour que la popUp soit visible
-		duration: 5, // On définit la durée de l'animation
+		duration: 2, // On définit la durée de l'animation
 		ease: "bounce.out", // On définit l'ease de l'animation
-		rotate: 360, // On fait tourner la popUp de 360 degrés
+		// rotate: 360, // On fait tourner la popUp de 360 degrés
 	})
 
 	return (
