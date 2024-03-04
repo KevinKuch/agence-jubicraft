@@ -17,8 +17,8 @@ export const Logo = () => {
 			<Image 
 				className="dark:hidden"
 				src="/jc-logo-dark.svg" 
-				height="100" 
-				width="100" 
+				height="500" 
+				width="500" 
 				alt="Jubilee Craft Logo" 
 			/>
 

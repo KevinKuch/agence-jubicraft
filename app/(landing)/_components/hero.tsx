@@ -63,9 +63,9 @@ export const Hero = () => {
 				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col justify-center items-center"
 			>
 				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Créativité,</h1>
-				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Visionnement</h1>
+				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Visionnement</h1>
 				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Impéccable</h1>
-				<h3 className="sm:text-3xl font-medium pt-[3rem]">
+				<h3 className="text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-bold pt-[3rem]">
 					Agence de création évenementielle
 				</h3>
 			</motion.div>

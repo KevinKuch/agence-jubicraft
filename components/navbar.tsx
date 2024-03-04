@@ -14,12 +14,11 @@ const Navbar = () => {
 			<Link href="/">
 				<Logo />
 			</Link>
-			<div className="ml-auto justify-end w-full flex items-center gap-x-[1.5rem] text-2xl">
-				<Link className="" href="/projets">Projets</Link>
-				<Link className="" href="/talents">Équipes</Link>
-				<Link className="" href="/contact">Contact</Link>
-				<Link className="" href="/presentation">Présentation</Link>
-				<ModeToggle />
+			<div className="ml-auto flex flex-col items-end lg:flex-row justify-end w-full gap-x-[1.5rem] text-2xl">
+				<Link className="font-bold" href="/projets">Projets</Link>
+				<Link className="font-bold" href="/contact">Contact</Link>
+				<Link className="font-bold" href="/presentation">Présentation</Link>
+				{/* <ModeToggle /> */}
 			</div>
 		</div>
 	);
