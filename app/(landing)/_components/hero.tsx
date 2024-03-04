@@ -44,7 +44,7 @@ export const Hero = () => {
 
 	return (
 		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem]`}>
-			<div className="absolute top-0 -z-10 h-full w-full">
+			{/* <div className="absolute top-0 -z-10 h-full w-full">
 				<div className="absolute bottom-auto left-0 right-0 top-0 h-[50rem] w-[50rem] -translate-x-[60%] translate-y-[20%] rounded-full bg-[rgba(193,145,247,0.94)] opacity-50 dark:opacity-20 blur-[200px]">
 				</div>
 				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[200%] translate-y-[20%] rounded-full bg-[rgba(248,190,233,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
@@ -55,7 +55,7 @@ export const Hero = () => {
 				</div>
 				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[10%] translate-y-[0%] rounded-full bg-[rgba(202,160,214,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
 				</div>
-			</div>
+			</div> */}
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
