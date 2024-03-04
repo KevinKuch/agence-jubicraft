@@ -60,13 +60,13 @@ export const Hero = () => {
 				initial="hidden"
 				whileInView="visible"
 				variants={variant1}
-				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col justify-center items-center"
+				className="z-10 space-y-3 md:space-y-8 lg:space-y-1 flex flex-col justify-center items-center pt-2"
 			>
 				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Créativité,</h1>
 				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Visionnement</h1>
 				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Impéccable</h1>
-				<h3 className="text-2xl sm:text-3xl md:text-4xl  lg:text-5xl font-bold pt-[3rem]">
-					Agence de création évenementielle
+				<h3 className="text-2xl sm:text-3xl md:text-4xl  lg:text-2xl font-bold pt-[6rem]">
+					Agence de création évènementielle
 				</h3>
 			</motion.div>
 			{/* <div className={`${style.popupContainer} flex justify-center items-center text-xs sm:text-sm lg:text-md font-bold`}>

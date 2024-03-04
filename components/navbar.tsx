@@ -10,17 +10,22 @@ import Link from 'next/link';
 
 const Navbar = () => {
 	return (
-		<div className={cn("z-50 fixed top-0 flex items-center w-full p-6")}>
-			<Link href="/">
-				<Logo />
-			</Link>
-			<div className="ml-auto flex flex-col items-end lg:flex-row justify-end w-full gap-x-[1.5rem] text-2xl">
-				<Link className="font-bold" href="/projets">Projets</Link>
-				<Link className="font-bold" href="/contact">Contact</Link>
-				<Link className="font-bold" href="/presentation">Présentation</Link>
-				{/* <ModeToggle /> */}
+		<nav className="z-50 fixed top-0 left-0 right-0 flex justify-center">
+			<div className="flex justify-center items-center w-full mx-12 mt-6 p-2 bg-white rounded-full shadow-md">
+				<Link href="/">
+					<Logo />
+				</Link>
+				<div className="flex flex-col items-end lg:flex-row justify-end w-full gap-x-[1.5rem] font-bold text-xl pr-4">
+					<Link href="/projets">Projets</Link>
+					<Link href="/contact">Contact</Link>
+					<Link href="/presentation">Présentation</Link>
+					{/* <ModeToggle /> */}
+				</div>
+				<div className='bg-[#6E05E6] rounded-full font-bold w-[20%] px-2 py-4 text-center text-white'>
+					Débuter un projet
+				</div>
 			</div>
-		</div>
+		</nav>
 	);
 };
 

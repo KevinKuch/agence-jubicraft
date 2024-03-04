@@ -12,13 +12,13 @@ const font = Trirong({
 
 export const Logo = () => {
 	return (
-		<div>
+		<div className="flex-none">
 			{/* Utilise le logo noir en theme clair */}
 			<Image 
 				className="dark:hidden"
 				src="/jc-logo-dark.svg" 
-				height="500" 
-				width="500" 
+				height="300" 
+				width="300" 
 				alt="Jubilee Craft Logo" 
 			/>
 
