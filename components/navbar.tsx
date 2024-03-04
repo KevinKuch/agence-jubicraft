@@ -6,11 +6,14 @@ import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { ModeToggle } from "@/components/mode-toggle";
 import Menu from './burger';
+import { useScrollTop } from "@/components/use-nav-scroll"; 
 import Link from 'next/link';
 
 const Navbar = () => {
+	const scrolled = useScrollTop();
+
 	return (
-		<nav className="z-50 fixed top-0 left-0 right-0 flex justify-center">
+		<nav className={`z-50 fixed top-0 left-0 right-0 flex justify-center ${scrolled ? 'hidden' : ''}`}>
 			<div className="flex justify-center items-center w-full mx-12 mt-6 p-2 bg-white rounded-full shadow-md">
 				<Link href="/">
 					<Logo />
