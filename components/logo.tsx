@@ -15,10 +15,10 @@ export const Logo = () => {
 		<div className="flex-none">
 			{/* Utilise le logo noir en theme clair */}
 			<Image 
-				className="dark:hidden"
+				className="dark:hidden cursor-pointer"
 				src="/jc-logo-dark.svg" 
-				height="300" 
-				width="300" 
+				height="150"
+				width="150" 
 				alt="Jubilee Craft Logo" 
 			/>
 

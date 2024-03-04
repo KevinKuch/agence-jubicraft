@@ -60,7 +60,7 @@ export const Hero = () => {
 				initial="hidden"
 				whileInView="visible"
 				variants={variant1}
-				className="z-10 space-y-3 md:space-y-8 lg:space-y-1 flex flex-col justify-center items-center pt-2"
+				className="z-10 space-y-3 md:space-y-8 lg:space-y-1 flex flex-col justify-center items-center pt-2 lg:mx-12"
 			>
 				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Créativité,</h1>
 				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Visionnement</h1>
