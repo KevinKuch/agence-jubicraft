@@ -27,6 +27,7 @@ const config = {
 				'telex': ['Telex', 'sans-serif'],
 				'rubik': ['Rubik Moonrocks', 'sans-serif'],
 				'rubik-doodle': ['Rubik Doodle Shadow', 'system-ui'],
+				'heebo': ['Heebo', 'sans-serif'],
 			},
 			textColor: {
 				skin: {

@@ -43,9 +43,9 @@ export const Hero = () => {
 	})
 
 	return (
-		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem]`}>
-			{/* <div className="absolute top-0 -z-10 h-full w-full">
-				<div className="absolute bottom-auto left-0 right-0 top-0 h-[50rem] w-[50rem] -translate-x-[60%] translate-y-[20%] rounded-full bg-[rgba(193,145,247,0.94)] opacity-50 dark:opacity-20 blur-[200px]">
+		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem] `}>
+			<div className="absolute top-0 -z-10 h-full w-full bg-[#f7deef] blur-[200px] dark:bg-[#7c5073] dark:blur-[100px]">
+				{/* <div className="absolute bottom-auto left-0 right-0 top-0 h-[50rem] w-[50rem] -translate-x-[60%] translate-y-[20%] rounded-full bg-[rgba(193,145,247,0.94)] opacity-50 dark:opacity-20 blur-[200px]">
 				</div>
 				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[200%] translate-y-[20%] rounded-full bg-[rgba(248,190,233,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
 				</div>
@@ -54,33 +54,32 @@ export const Hero = () => {
 				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[0%] translate-y-[10%] rounded-full bg-[rgba(239,185,255,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
 				</div>
 				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[10%] translate-y-[0%] rounded-full bg-[rgba(202,160,214,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-			</div> */}
+				</div> */}
+			</div>
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
 				variants={variant1}
 				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col justify-center items-center"
 			>
-				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem]">Créativité,</h1>
-				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] bg-[#CCE9FF] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
-				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem]">Impéccable</h1>
+				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Créativité,</h1>
+				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Visionnement</h1>
+				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Impéccable</h1>
 				<h3 className="sm:text-3xl font-medium pt-[3rem]">
 					Agence de création évenementielle
 				</h3>
 			</motion.div>
-			<div className={`${style.popupContainer} flex justify-center items-center text-xs sm:text-sm lg:text-md font-bold`}>
+			{/* <div className={`${style.popupContainer} flex justify-center items-center text-xs sm:text-sm lg:text-md font-bold`}>
 				{/* map the popup text */}
-				<div className={`${style.popupElement}`}>
+				{/* <div className={`${style.popupElement}`}>
 				{popupText.map((text, index) => {
 					return (
 						<p id="popup" key={index} className={`${style.popup} border-2 border-[#613870] rounded-[2rem] lg:p-3`}>
 							{text}
 						</p>
 					)
-				})}
-				</div>
+				})} */}
+				{/* </div> */}
 			</div>
-		</div>
 	);
 };
