@@ -29,10 +29,29 @@ export const Hero = () => {
 		tl.from(".heroText", {
 			y:200,
 			ease: "power4.out",
-			duration: 1.8,
+			duration: 0.8,
 			stagger: {
 				amount: 0.4,
 			}
+		})
+
+		tl.to("#dropedText", {
+			transformOrigin: "top right",
+			rotation: -2,
+			duration:1,
+			ease: "bounce.out",
+		})
+
+		tl.fromTo("#kite", {
+			y:-50,
+			opacity:0,
+			ease:"bounce.in",
+		},
+		{
+			y:0,
+			opacity:1,
+			duration: 1,
+			ease: "bounce.out",
 		})
 	})
 	
@@ -81,10 +100,10 @@ export const Hero = () => {
 					</h1>
 				</div>
 				<div className="overflow-hidden">
-					<h1 className="heroText font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">
+					<h1 id="dropedText" className="heroText font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">
 						Visionnement
 					</h1>
-					<iframe className="absolute left-[4rem] top-[25rem]" src="https://lottie.host/embed/252d24f0-cb52-46ca-8f4d-f1f79cfa1c0b/7116v9a8w3.json"></iframe>
+					<iframe id="kite" className="absolute left-[4rem] top-[25rem]" src="https://lottie.host/embed/252d24f0-cb52-46ca-8f4d-f1f79cfa1c0b/7116v9a8w3.json"></iframe>
 				</div>
 				<div className="overflow-hidden">
 					<h1 className="heroText  uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">
