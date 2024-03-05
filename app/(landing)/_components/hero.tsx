@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import  style  from "./style.module.scss";
 import { motion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
 
 export const Hero = () => {
 
@@ -20,27 +21,42 @@ export const Hero = () => {
 		visible: { opacity: 1, y: 0 }
 	};
 
-	const popupText = ["Visuelle", "Créative", "Innovante", "Inspirante", "Époustouflante", "Éblouissante", "Élégante"]
+	const popupText = ["Visuelle", "Créative", "Innovante", "Inspirante", "Époustouflante", "Éblouissante", "Élégante"];
+
+	useGSAP(() => {
+		const tl =gsap.timeline();
+
+		tl.from(".heroText", {
+			y:200,
+			ease: "power4.out",
+			duration: 1.8,
+			stagger: {
+				amount: 0.4,
+			}
+		})
+	})
 	
-	// On crée une timeline avec gsap
-	let tl = gsap.timeline({ 
-		repeat: -1, // -1 signifie que l'animation se répète à l'infini
-		yoyo: true, // yoyo signifie que l'animation se joue en sens inverse
-	});
+	// // On crée une timeline avec gsap
+	// let tl = gsap.timeline({ 
+	// 	repeat: -1, // -1 signifie que l'animation se répète à l'infini
+	// 	yoyo: true, // yoyo signifie que l'animation se joue en sens inverse
+	// });
 
-	// Animation de la popUp text
-	tl.set("#popup", {
-		scale:0.5, // On met l'échelle à 0 pour que la popUp soit invisible
-		transformOrigin: "50% 50%", // On définit le point de transformation
-	})
+	// // Animation de la popUp text
+	// tl.set("#popup", {
+	// 	scale:0.5, // On met l'échelle à 0 pour que la popUp soit invisible
+	// 	transformOrigin: "50% 50%", // On définit le point de transformation
+	// })
 
-	// On anime la popUp
-	tl.to("#popup", {
-		scale:1, // On met l'échelle à 1 pour que la popUp soit visible
-		duration: 2, // On définit la durée de l'animation
-		ease: "bounce.out", // On définit l'ease de l'animation
-		// rotate: 360, // On fait tourner la popUp de 360 degrés
-	})
+	// // On anime la popUp
+	// tl.to("#popup", {
+	// 	scale:1, // On met l'échelle à 1 pour que la popUp soit visible
+	// 	duration: 2, // On définit la durée de l'animation
+	// 	ease: "bounce.out", // On définit l'ease de l'animation
+	// 	// rotate: 360, // On fait tourner la popUp de 360 degrés
+	// })
+
+	
 
 	return (
 		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem] `}>
@@ -56,19 +72,30 @@ export const Hero = () => {
 				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[10%] translate-y-[0%] rounded-full bg-[rgba(202,160,214,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
 				</div> */}
 			</div>
-			<motion.div
-				initial="hidden"
-				whileInView="visible"
-				variants={variant1}
-				className="z-10 space-y-3 md:space-y-8 lg:space-y-1 flex flex-col justify-center items-center pt-2 lg:mx-12"
+			<div className="z-10 space-y-3 md:space-y-8 lg:space-y-1 flex flex-col justify-center items-center pt-2 lg:mx-12"
 			>
-				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Créativité,</h1>
-				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Visionnement</h1>
-				<h1 className="uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">Impéccable</h1>
-				<h3 className="text-2xl sm:text-3xl md:text-4xl  lg:text-2xl font-bold pt-[6rem]">
+				<div className="overflow-hidden">
+					<h1 className="heroText uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">
+						Créativité,
+					</h1>
+				</div>
+				<div className="overflow-hidden">
+					<h1 className="heroText font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-6 bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">
+						Visionnement
+					</h1>
+				</div>
+				<div className="overflow-hidden">
+					<h1 className="heroText  uppercase font-heebo font-black text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-8xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem] bg-gradient-to-r from-purple-700 to-fuchsia-400 bg-clip-text text-transparent">
+						Impéccable
+					</h1>
+				</div>
+				<h3 className="sm:text-xl md:text-2xl  lg:text-3xl font-bold pt-[6rem]">
 					Agence de création évènementielle
 				</h3>
-			</motion.div>
+			</div>
+			<div className="bg-[#613870] text-white absolute bottom-0 p-12 w-full">
+				<h1>Border test</h1>
+			</div>
 			{/* <div className={`${style.popupContainer} flex justify-center items-center text-xs sm:text-sm lg:text-md font-bold`}>
 				{/* map the popup text */}
 				{/* <div className={`${style.popupElement}`}>

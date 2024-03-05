@@ -1,14 +1,16 @@
 import { Footer } from "../../components/footer";
 import { Hero } from "./_components/hero";
-import Section2 from "./_components/section2";
-import Section3 from "./_components/section3";
+import SectionImage from "./_components/sectionImage";
+import About from "./_components/sectionAbout";
+import Expertise from "./_components/sectionExpert";
 
 const LandingPage = () => {
 	return (
 		<div>
 			<Hero />
-			<Section2 />
-			{/* <Section3 /> */}
+			<SectionImage />
+			<About />
+			<Expertise />
 		</div>
 	);
 };

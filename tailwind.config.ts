@@ -29,7 +29,7 @@ const config = {
 				'rubik-doodle': ['Rubik Doodle Shadow', 'system-ui'],
 				'heebo': ['Heebo', 'sans-serif'],
 			},
-			textColor: {
+			mainColor: {
 				skin: {
 					base: '	#613870',
 				}
