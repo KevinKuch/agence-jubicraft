@@ -39,13 +39,13 @@ const About = () => {
 			</div>
 			<div className='text-white font-telex md:text-xl lg:text-3xl md:mx-auto md:max-w-[1200px]'>
 				<h1 ref={text} className="pb-6 lg:pb-16 lg:pl-[35rem]">Chez Jubilee Craft, nous somme reconnus pour notre grande sensibilité à percevoir et à créer la beauté en nous réinventant constamment.</h1>
-				<h2 className='pb-16 lg:pl-[35rem]'>À propos <span className='underline'>logo</span></h2>
+				<h2 data-scroll data-scroll-speed="0.1" className='pb-16 lg:pl-[35rem]'>À propos <span className='underline'>logo</span></h2>
 			</div>
 			<div className={`${styles.imgContainer}`}>
-				<div className={`${styles.imgElement}`}>
+				<div data-scroll data-scroll-speed="0.2" className={`${styles.imgElement}`}>
 					<Image src={ImageAbout} fill alt="image-about" />
 				</div>
-				<div className={`${styles.imgElement} `}>
+				<div data-scroll data-scroll-speed="0.3" className={`${styles.imgElement} `}>
 					<Image src={ImageAbout2} fill alt="image-about" />
 				</div>
 			</div>

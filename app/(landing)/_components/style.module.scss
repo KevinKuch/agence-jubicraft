@@ -199,3 +199,69 @@
 		}
 	}
 }
+
+// Expertise
+
+.expertise {
+	display: flex;
+	flex-direction: column;
+	color: #613870;
+	padding: 10%;
+
+	.expertiseDes {
+		display: flex;
+    gap: 5%;
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+    justify-content: space-between;
+
+
+		.imageContainer {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			right:5vw;
+		}
+
+		.imageContainer img {
+			object-fit:cover;
+		}
+	}
+
+	.column {
+    display: flex;
+		font-family: 'Telex', sans-serif;
+
+    &:last-of-type {
+        align-items: center;
+    }
+}
+
+
+	.expertiseList {
+    display: flex;
+    flex-direction: column;
+
+		.expertiseEl {
+			// display: flex;
+			// justify-content: flex-start;
+			// border-top: 1px solid #613870;
+			// text-transform: uppercase;
+			// font-weight: bold;
+			// cursor: pointer;
+			
+
+			.expertTitle {
+				
+
+				&:hover {
+					
+				}
+			}
+		}
+
+		&:last-of-type {
+			border-bottom: 1px solid #613870;
+		}
+	}
+}
