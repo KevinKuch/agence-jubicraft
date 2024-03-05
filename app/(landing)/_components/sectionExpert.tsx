@@ -1,11 +1,13 @@
 "use client";
 
 import styles from './style.module.scss'
+import { useRef, useState } from 'react';
 import Image from 'next/image'
+
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
-import { useLayoutEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, useInView } from 'framer-motion';
 
 
 const Expertise = () => {
@@ -44,10 +46,21 @@ const Expertise = () => {
 			})
 		})
 
+		const container = useRef(null);
+		const isInView = useInView(container); //framer-motion hook
+
+		const slideUpText = {
+			initial: {y: "100%"},
+			animate: (i: number) => ({y: 0 , transition: {duration: 0.4, delay: i * 0.02}}),
+			hidden: {y: "100%"}
+		}
+
 
 	return ( 
 		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full `}>
-			<h1 className="font-trirong font-black text-4xl lg:text-7xl pb-[5vh]">Nos Expertise</h1>
+			<div ref={container}>
+				<h1 className="font-trirong font-black text-4xl lg:text-7xl max-auto my-16 max-w-[1200px relative inline-flex overflow-hidden"><motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}>Nos Expertise</motion.span></h1>
+			</div>
 			<div className={`${styles.expertiseDes}`}>
 				<div ref={imageContainer} className={`${styles.imageContainer} hidden md:block`}>
 					<Image
@@ -63,7 +76,7 @@ const Expertise = () => {
 					<p>Jubilee Craft, plongez dans l&apos;univers des festivals exceptionnels, où la créativité fusionne avec une exécution impeccable, créant ainsi des moments magiques et des souvenirs durables.</p>
 				</div>
 			</div>
-			<div className={`${styles.expertiseList} lg:pt-[4rem] lg:mb-[2rem]`}>
+			<div className={`${styles.expertiseList} lg:pt-[4rem] lg:mb-[12rem]`}>
 				{
 					events.map((event, index) => {
 						return <div onMouseOver={() => {setHoverEvents(index)}} className={`${styles.expertiseEl} flex justify-start border-t border-[#613870] uppercase font-black cursor-pointer md:justify-end`} key={`p_${index}`}>

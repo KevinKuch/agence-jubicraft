@@ -24,7 +24,7 @@ const About = () => {
 				scrollTrigger: {
 						trigger: '.about-split-text',
 						start: 'top center',
-						end: 'bottom center%',
+						end: 'bottom center',
 						scrub: true,
 						// markers: true,
 				},
@@ -44,9 +44,13 @@ const About = () => {
 
 	return ( 
 		<section ref={container} className={`${styles.about} h-[200vh] bg-[#613870] overflow-hidden`}>
-			<div className='text-white font-trirong font-black text-4xl lg:text-7xl pt-24 pb-12 mx-auto max-w-[1200px]'>
-				<h1>Artisans, Esthétiques</h1>
-				<h1>et Innovateurs</h1>
+			<div className='text-white font-trirong font-black text-4xl lg:text-7xl mx-auto my-16 max-w-[1200px]'>
+				<h1 className='relative inline-flex overflow-hidden'>
+					<motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}  className=''>Artisans, Esthétiques</motion.span>
+				</h1>
+				<h1 className='relative inline-flex overflow-hidden'>
+					<motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}  className=''>et Innovateurs</motion.span>
+				</h1>
 			</div>
 			<div className='text-white font-telex md:text-xl lg:text-3xl md:mx-auto md:max-w-[1200px]'>
 				<p ref={text} className="pb-6 lg:pb-16 lg:pl-[35rem]">
