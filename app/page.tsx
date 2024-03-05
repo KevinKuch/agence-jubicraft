@@ -15,7 +15,7 @@ export default function Home() {
   }, []) 
 
 	return (
-		<main className="bg-violet-100">
+		<main className="">
 			<LandingPage />
 		</main>
 	)

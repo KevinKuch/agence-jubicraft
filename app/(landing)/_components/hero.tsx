@@ -23,7 +23,7 @@ export const Hero = () => {
 
 	// useGSAP est un hook qui permet d'appliquer des animations et cela tue automotiquement les animations sans avoir à utiliser useEffect avec sa dépendance
 	useGSAP(() => {
-		const tl =gsap.timeline();
+		const tl = gsap.timeline();
 
 		tl.from(".heroText", {
 			y:200,
@@ -55,20 +55,8 @@ export const Hero = () => {
 	})
 
 	return (
-		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem] `}>
+		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem] bg-violet-100`}>
 			<iframe className="absolute right-0" src="https://lottie.host/embed/eb5080f1-ffcf-45ee-9451-c16f0869313c/Gk7Nwyy57u.json"></iframe>
-			<div className="absolute top-0 -z-10 h-full w-full bg-[#f7deef] blur-[200px] dark:bg-[#7c5073] dark:blur-[100px]">
-				{/* <div className="absolute bottom-auto left-0 right-0 top-0 h-[50rem] w-[50rem] -translate-x-[60%] translate-y-[20%] rounded-full bg-[rgba(193,145,247,0.94)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[200%] translate-y-[20%] rounded-full bg-[rgba(248,190,233,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[70%] translate-y-[80%] rounded-full bg-[rgba(247,156,223,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[0%] translate-y-[10%] rounded-full bg-[rgba(239,185,255,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[10%] translate-y-[0%] rounded-full bg-[rgba(202,160,214,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div> */}
-			</div>
 			<div className="z-10 space-y-3 md:space-y-8 lg:space-y-1 flex flex-col justify-center items-center pt-2 lg:mx-12"
 			>
 				<div className="overflow-hidden">

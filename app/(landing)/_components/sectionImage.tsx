@@ -73,7 +73,7 @@ const Section2 = () => {
 ]
 
 	return ( 
-		<div ref={container} className={`${styles.container} h-300 bg-white`}>
+		<div ref={container} className={`${styles.container} h-300 bg-violet-50`}>
 			<div className={styles.sticky}>
 				{
 					// On map les images pour les afficher

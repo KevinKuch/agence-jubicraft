@@ -19,15 +19,18 @@ const About = () => {
 	
 	const text = useRef(null);
 	
+	// Hook GSAP pour animer le texte et les splits text
 	useGSAP(() => {
 		gsap.from(text.current, {
+			// effet voulue
 				scrollTrigger: {
-						trigger: '.about-split-text',
+						trigger: '.about-split-text', // déclencheur
 						start: 'top center',
 						end: 'bottom center',
-						scrub: true,
+						scrub: true, // permet de faire l'animation en même temps que le scroll
 						// markers: true,
 				},
+				// effet départ
 				opacity: 0.2,
 				stagger: 0.1,
 				duration: 2,
@@ -36,6 +39,7 @@ const About = () => {
 
 	const container = useRef(null);
 	const isInView = useInView(container); //framer-motion hook
+	// Variante de l'animation pour le texte Revealing
 	const slideUpText = {
 		initial: {y: "100%"},
 		animate: (i: number) => ({y: 0 , transition: {duration: 0.4, delay: i * 0.02}}),
@@ -55,6 +59,7 @@ const About = () => {
 			<div className='text-white font-telex md:text-xl lg:text-3xl md:mx-auto md:max-w-[1200px]'>
 				<p ref={text} className="pb-6 lg:pb-16 lg:pl-[35rem]">
 					{
+						// Fonction JS pour séparer les mots et les animer. Chaque mot est un span
 						phrase.split(" ").map((word, index) => {
 							return <span key={index} className="mr-2 relative inline-flex overflow-hidden"><motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"} custom={index}>{word}</motion.span></span>
 						})
