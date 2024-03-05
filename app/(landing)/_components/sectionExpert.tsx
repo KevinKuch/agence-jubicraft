@@ -46,7 +46,7 @@ const Expertise = () => {
 
 
 	return ( 
-		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full border border-red-500`}>
+		<section ref={expertiseSection} className={`${styles.expertise} h-[100vh] w-full border border-red-500`}>
 			<h1 className="font-trirong font-black text-4xl lg:text-7xl pb-[5vh]">Nos Expertise</h1>
 			<div className={`${styles.expertiseDes}`}>
 				<div ref={imageContainer} className={`${styles.imageContainer} hidden md:block`}>
@@ -56,10 +56,10 @@ const Expertise = () => {
 						alt={events[hoverEvents].title}
 					/>
 				</div>
-				<div data-scroll data-scroll-speed="0.1" className={`${styles.column} lg:w-[25%] md:text-xl lg:text-2xl`}>
+				<div data-scroll data-scroll-speed="0.1" className={`${styles.column}  md:text-xl lg:text-2xl`}>
 					<p>Jubilee Craft excelle dans la planification stratégique d&apos;événements, offrant des festivals immersifs où chaque détail est méticuleusement façonné pour captiver vos participants.</p>
         </div>
-				<div data-scroll data-scroll-speed="0.2" className={`${styles.column} lg:w-[25%] md:text-xl lg:text-2xl`}>
+				<div data-scroll data-scroll-speed="0.2" className={`${styles.column}  md:text-xl lg:text-2xl`}>
 					<p>Jubilee Craft, plongez dans l&apos;univers des festivals exceptionnels, où la créativité fusionne avec une exécution impeccable, créant ainsi des moments magiques et des souvenirs durables.</p>
 				</div>
 			</div>

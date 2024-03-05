@@ -210,17 +210,17 @@
 
 	.expertiseDes {
 		display: flex;
+    height: 700px;
     gap: 5%;
-		margin-top: 10vh;
-		margin-bottom: 10vh;
+    width: 100%;
     justify-content: space-between;
 
 
 		.imageContainer {
 			position: relative;
-			width: 100%;
+			width: 40%;
 			height: 100%;
-			right:5vw;
+			
 		}
 
 		.imageContainer img {
@@ -229,8 +229,8 @@
 	}
 
 	.column {
-    display: flex;
-		font-family: 'Telex', sans-serif;
+		display: flex;
+    width: 25%;
 
     &:last-of-type {
         align-items: center;

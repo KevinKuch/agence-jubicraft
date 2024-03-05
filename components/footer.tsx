@@ -2,11 +2,8 @@ import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
 	return (
-		<div className="flex items-center w-full p-6 z-50">
-			<div className="md:ml-auto w-full justify-between md:justify-end flex items-center gap-x-2 text-muted-foreground">
-				<Button variant="ghost">Conditions d'utilisation</Button>
-				<Button variant="ghost">Politique de confidentialité</Button>
-			</div>
+		<div className="bg-blue-500 h-screen">
+			<h1>this is a footer</h1>
 		</div>
 	);
 };
