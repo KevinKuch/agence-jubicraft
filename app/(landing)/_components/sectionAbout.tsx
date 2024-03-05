@@ -56,7 +56,9 @@ const About = () => {
 						})
 					}
 				</p>
-				<h2 data-scroll data-scroll-speed="0.1" className='pb-16 lg:pl-[35rem]'>À propos <span className='underline'>logo</span></h2>
+				<div>
+					<h2 data-scroll data-scroll-speed="0.1" className='pb-16 lg:pl-[35rem]'>À propos <iframe className="w-20 h-20" src="https://lottie.host/embed/c2cb0509-6959-4fad-8882-1ba69c93dfe3/EReLfnb8vo.json"></iframe></h2>
+				</div>
 			</div>
 			<div className={`${styles.imgContainer}`}>
 				<div data-scroll data-scroll-speed="0.2" className={`${styles.imgElement}`}>
@@ -67,7 +69,9 @@ const About = () => {
 				</div>
 			</div>
 		</section>
+		
 	 );
+	 
 }
  
 export default About;

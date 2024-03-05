@@ -36,7 +36,7 @@ export const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="absolute bottom-0 w-full mx-2 md:mx-6 lg:mx-12 pb-2">
+			<div className="absolute bottom-0 w-full mx-2 md:mx-6 lg:mx-12 pb-4">
 					<ul className="text-center space-y-2 lg:text-left">
 						<li>Conditions d'utilisation</li>
 						<li>Politique de confidentialité</li>
