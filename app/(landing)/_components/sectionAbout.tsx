@@ -1,7 +1,7 @@
 "use client"
 import styles from './style.module.scss';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -35,7 +35,7 @@ const About = () => {
 });
 
 	const container = useRef(null);
-	const isInView = useInView(container);
+	const isInView = useInView(container); //framer-motion hook
 	const slideUpText = {
 		initial: {y: "100%"},
 		animate: (i: number) => ({y: 0 , transition: {duration: 0.4, delay: i * 0.02}}),

@@ -21,8 +21,7 @@ export const Hero = () => {
 		visible: { opacity: 1, y: 0 }
 	};
 
-	const popupText = ["Visuelle", "Créative", "Innovante", "Inspirante", "Époustouflante", "Éblouissante", "Élégante"];
-
+	// useGSAP est un hook qui permet d'appliquer des animations et cela tue automotiquement les animations sans avoir à utiliser useEffect avec sa dépendance
 	useGSAP(() => {
 		const tl =gsap.timeline();
 
@@ -54,28 +53,6 @@ export const Hero = () => {
 			ease: "bounce.out",
 		})
 	})
-	
-	// // On crée une timeline avec gsap
-	// let tl = gsap.timeline({ 
-	// 	repeat: -1, // -1 signifie que l'animation se répète à l'infini
-	// 	yoyo: true, // yoyo signifie que l'animation se joue en sens inverse
-	// });
-
-	// // Animation de la popUp text
-	// tl.set("#popup", {
-	// 	scale:0.5, // On met l'échelle à 0 pour que la popUp soit invisible
-	// 	transformOrigin: "50% 50%", // On définit le point de transformation
-	// })
-
-	// // On anime la popUp
-	// tl.to("#popup", {
-	// 	scale:1, // On met l'échelle à 1 pour que la popUp soit visible
-	// 	duration: 2, // On définit la durée de l'animation
-	// 	ease: "bounce.out", // On définit l'ease de l'animation
-	// 	// rotate: 360, // On fait tourner la popUp de 360 degrés
-	// })
-
-
 
 	return (
 		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem] `}>

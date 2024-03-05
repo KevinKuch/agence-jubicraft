@@ -36,14 +36,14 @@ export const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="absolute bottom-0 w-full mx-2 md:mx-6 lg:mx-12 pb-4">
-					<ul className="text-center space-y-2 lg:text-left">
-						<li>Conditions d'utilisation</li>
-						<li>Politique de confidentialité</li>
-						<hr className="lg:hidden h-px my-8 bg-[#60386E] border-0"/>
-						<li>©2024 Kevin Kuch. Tous droits réservés.</li>
-					</ul>
-				</div>
+			<div className="absolute bottom-0 mx-2 md:mx-6 lg:mx-12 pb-4">
+				<ul className="text-center space-y-2 lg:text-left">
+					<li>Conditions d'utilisation</li>
+					<li>Politique de confidentialité</li>
+					<hr className="lg:hidden h-px my-8 bg-[#60386E] border-0"/>
+					<li>©2024 Kevin Kuch. Tous droits réservés.</li>
+				</ul>
+			</div>
 		</footer>
 	);
 };
