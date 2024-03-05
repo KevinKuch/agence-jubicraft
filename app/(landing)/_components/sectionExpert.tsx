@@ -46,7 +46,7 @@ const Expertise = () => {
 
 
 	return ( 
-		<section ref={expertiseSection} className={`${styles.expertise} h-[100vh] w-full border border-red-500`}>
+		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full `}>
 			<h1 className="font-trirong font-black text-4xl lg:text-7xl pb-[5vh]">Nos Expertise</h1>
 			<div className={`${styles.expertiseDes}`}>
 				<div ref={imageContainer} className={`${styles.imageContainer} hidden md:block`}>
@@ -63,7 +63,7 @@ const Expertise = () => {
 					<p>Jubilee Craft, plongez dans l&apos;univers des festivals exceptionnels, où la créativité fusionne avec une exécution impeccable, créant ainsi des moments magiques et des souvenirs durables.</p>
 				</div>
 			</div>
-			<div className={`${styles.expertiseList} `}>
+			<div className={`${styles.expertiseList} lg:pt-[4rem] lg:mb-[2rem]`}>
 				{
 					events.map((event, index) => {
 						return <div onMouseOver={() => {setHoverEvents(index)}} className={`${styles.expertiseEl} flex justify-start border-t border-[#613870] uppercase font-black cursor-pointer md:justify-end`} key={`p_${index}`}>

@@ -26,7 +26,7 @@ const About = () => {
 						start: 'top center',
 						end: 'bottom center%',
 						scrub: true,
-						markers: true,
+						// markers: true,
 				},
 				opacity: 0.2,
 				stagger: 0.1,

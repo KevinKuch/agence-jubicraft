@@ -210,7 +210,7 @@
 
 	.expertiseDes {
 		display: flex;
-    height: 700px;
+    height: 800px;
     gap: 5%;
     width: 100%;
     justify-content: space-between;
@@ -230,6 +230,7 @@
 
 	.column {
 		display: flex;
+		margin-top: 1rem;
     width: 25%;
 
     &:last-of-type {
