@@ -8,8 +8,8 @@ import { useGSAP } from "@gsap/react";
 import { motion, useInView } from 'framer-motion';
 
 import Image from 'next/image';
-import ImageAbout from '../../../public/image-6.jpg';
-import ImageAbout2 from '../../../public/image7.jpg';
+import ImageAbout from '../../../../public/image-6.jpg';
+import ImageAbout2 from '../../../../public/image7.jpg';
 
 const About = () => {
 
