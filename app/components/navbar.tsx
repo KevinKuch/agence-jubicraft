@@ -1,12 +1,8 @@
 "use client";
 
 import styles from './style.module.scss';
-
-import { cn } from "@/lib/utils";
-import { Logo } from "@/components/logo";
-import { ModeToggle } from "@/components/mode-toggle";
-import Menu from './burger';
-import { useScrollTop } from "@/components/use-nav-scroll"; 
+import { Logo } from "@/app/components/logo";
+import { useScrollTop } from "@/app/components/use-nav-scroll"; 
 import Link from 'next/link';
 import { useState } from 'react';
 

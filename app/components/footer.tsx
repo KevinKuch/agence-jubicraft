@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/lib/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import TwitterIcon from "../public/twitter-logo.svg";
