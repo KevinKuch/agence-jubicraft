@@ -1,9 +1,8 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import TwitterIcon from "../public/twitter-logo.svg";
 
-export const Footer = () => {
+ const Footer = () => {
 	return (
 		<footer className="bg-violet-200 h-[70vh] lg:h-[80vh] w-full relative">
 			<div className="mx-2 md:mx-6 lg:mx-12 max-w-[1600px]">
@@ -47,3 +46,5 @@ export const Footer = () => {
 		</footer>
 	);
 };
+
+export default Footer;

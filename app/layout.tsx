@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Telex } from "@next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar";
-import { Footer } from "@/components/footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+
+
 
 const telex = Telex({ 
 	subsets: ["latin"],
@@ -38,9 +40,11 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={telex.className}>
 			{/* Provenant du shadcn Theme du /components/providers/theme-provider.tsx */}
+			<main>
 				<Navbar />
 				{children}
 				<Footer />
+			</main>
 			</body>
 		</html>
 	);

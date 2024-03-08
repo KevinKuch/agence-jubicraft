@@ -2,11 +2,9 @@
 
 import styles from './style.module.scss';
 
-import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
-import { ModeToggle } from "@/components/mode-toggle";
-import Menu from './burger';
 import { useScrollTop } from "@/components/use-nav-scroll"; 
+import TransitionLink from './transitionLink';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -21,16 +19,14 @@ const Navbar = () => {
 	}
 
 	return (
-		<nav className={`z-50 fixed top-0 left-0 right-0 flex justify-center mx-auto max-w-[1600px] ${scrolled ? 'hidden' : ''} `} >
+		<nav className={` fixed top-0 left-0 right-0 flex justify-center mx-auto max-w-[1600px] ${scrolled ? 'hidden' : ''} `} >
 			<div className="flex justify-between items-center w-full mx-2 md:mx-6 lg:mx-12 mt-6 p-2 bg-white rounded-full shadow-md">
-				<Link href="/">
-					<Logo />
-				</Link>
+				<TransitionLink href="/" label="JubileeCraft" ></TransitionLink>
+			
 				<div className="hidden lg:flex items-end flex-row justify-end w-full gap-x-[1.5rem] font-bold text-xl pr-4">
-					<Link href="/projets">Projets</Link>
-					<Link href="/contact">Contact</Link>
-					<Link href="/presentation">Présentation</Link>
-					{/* <ModeToggle /> */}
+					<TransitionLink href="/projets" label="Projets" />
+					<TransitionLink href="/contact" label="Contact" />
+					<TransitionLink href="/presentation" label="Présentation" />
 				</div>
 				<div className='bg-[#6E05E6] hidden lg:block rounded-full font-bold w-[13rem] px-2 py-4 text-center text-white'>
 					Débuter un projet
@@ -58,7 +54,6 @@ const Navbar = () => {
 						<Link href="/">
 							<li>Presentation</li>
 						</Link>
-						
 					</ul>
 				</div>
 			</div>
