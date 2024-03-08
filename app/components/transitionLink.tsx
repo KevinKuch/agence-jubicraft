@@ -2,10 +2,11 @@
 
 import { usePathname, useRouter } from "next/navigation"
 import { pageTransitionExit } from "./page-transition";
+import { ReactNode } from "react";
 
 interface Props {
 	href: string;
-	label: string;
+	label: ReactNode;
 }
 
 const TransitionLink: React.FC<Props> = ({ href, label }: Props) => {
@@ -19,7 +20,7 @@ const TransitionLink: React.FC<Props> = ({ href, label }: Props) => {
 	}
 
 	return (
-		<button className="text-xl text-neutral-900 hover:text-neutral-700" onClick={handleClick}>
+		<button className="text-xl text-[#613870] hover:underline" onClick={handleClick}>
 			{label}
 		</button>
 	)

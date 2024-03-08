@@ -21,7 +21,7 @@ const Navbar = () => {
 	return (
 		<nav className={` fixed top-0 left-0 right-0 flex justify-center mx-auto max-w-[1600px] ${scrolled ? 'hidden' : ''} `} >
 			<div className="flex justify-between items-center w-full mx-2 md:mx-6 lg:mx-12 mt-6 p-2 bg-white rounded-full shadow-md">
-				<TransitionLink href="/" label="JubileeCraft" ></TransitionLink>
+				<TransitionLink href="/" label={<Logo/>} />
 			
 				<div className="hidden lg:flex items-end flex-row justify-end w-full gap-x-[1.5rem] font-bold text-xl pr-4">
 					<TransitionLink href="/projets" label="Projets" />
