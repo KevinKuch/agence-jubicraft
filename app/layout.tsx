@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Telex } from "@next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navbar from "../components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -39,17 +38,9 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={telex.className}>
 			{/* Provenant du shadcn Theme du /components/providers/theme-provider.tsx */}
-			<ThemeProvider
-			attribute="class"
-			defaultTheme="system"
-			enableSystem
-			disableTransitionOnChange
-			storageKey="jc-theme"
-			>
 				<Navbar />
 				{children}
 				<Footer />
-			</ThemeProvider>
 			</body>
 		</html>
 	);
