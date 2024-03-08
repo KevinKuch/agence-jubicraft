@@ -7,12 +7,12 @@ import Expertise from "./_components/sectionExpert";
 
 const LandingPage = () => {
 	return (
-		<>
+		<div>
 			<Hero />
 			<SectionImage />
 			<About />
 			<Expertise />
-		</>
+		</div>
 	);
 };
 
