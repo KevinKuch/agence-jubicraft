@@ -42,7 +42,7 @@ const Expertise = () => {
 				start: '-350px',
 				end: '.expertise',
 				pin: true,
-				markers: true,
+				// markers: true,
 			})
 		})
 
