@@ -11,7 +11,7 @@ if (bannerOne && bannerTwo && bannerThree && bannerFour) {
 	const tl = gsap.timeline();
 
 	tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], { yPercent: 0 })
-		.to([bannerOne, bannerTwo, bannerThree, bannerFour], { yPercent: 100, stagger: 0.2})
+		.to([bannerOne, bannerTwo, bannerThree, bannerFour], { yPercent: 100, stagger: 0.1})
 	}
 
 }
@@ -26,7 +26,7 @@ export const pageTransitionExit = (href: string, router: AppRouterInstance) => {
 		const tl = gsap.timeline();
 	
 		tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], { yPercent: -100 })
-			.to([bannerOne, bannerTwo, bannerThree, bannerFour], { yPercent: 0, stagger: 0.2, onComplete: () => {
+			.to([bannerOne, bannerTwo, bannerThree, bannerFour], { yPercent: 0, stagger: 0.1, onComplete: () => {
 				router.push(href);
 			}})
 		}
