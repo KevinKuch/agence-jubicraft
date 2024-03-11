@@ -45,7 +45,7 @@ export const Hero = () => {
 
 	return (
     <div className={`${styles.main} min-h-screen w-full space-y-4 pt-[8rem] relative`}>
-        <div className="z-10 md:space-y-6 lg:space-y-1 flex flex-col justify-center items-center pt-2 lg:mx-12">
+        <div className="z-10 flex flex-col justify-center items-center pt-2 lg:mx-12">
             <div className="overflow-hidden">
                 <h2 className={`${styles.secondText} heroText text-9xl uppercase font-heebo font-black `}>
                     Créativité,
@@ -65,12 +65,13 @@ export const Hero = () => {
                 Agence de création évènementielle
             </h3>
         </div>
-				<div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pb-6 px-6 flex justify-between items-center gap-12 overflow-x-hidden w-full max-w-[1500px]">
-					<div className="flex-none">
-							<Image className="w-52" src="/jc-logo-initial.svg" alt="Jubilee Craft logo" width={100} height={100} />
-					</div>
-					<p className={`${styles.placeText} uppercase`}>Montreal, Toronto et Quebec</p>
-				</div>
+				<div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pb-6 flex justify-around items-center gap-12 w-full max-w-[1500px]">
+    <div className="flex-none relative w-full max-w-[200px] aspect-[70/45]">
+        <Image className="w-52" src="/jc-logo-initial.svg" alt="Jubilee Craft logo" fill />
+    </div>
+    <p className={`${styles.placeText} uppercase`}>Montreal, Toronto et Quebec</p>
+</div>
+
     </div>
 );
 

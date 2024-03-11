@@ -9,7 +9,7 @@ import { motion, useInView } from 'framer-motion';
 
 import Image from 'next/image';
 import ImageAbout from '@/public/image6.jpg';
-import ImageAbout2 from '@/publicimage7.jpg';
+import ImageAbout2 from '@/public/image7.jpg';
 
 const About = () => {
 

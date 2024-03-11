@@ -55,7 +55,7 @@ export default function Navbar() {
 		<>
 			<header>
 				<NavMenu toggle={menuClicked} />
-				<nav id="navbar" className="z-50 bg-background fixed top-0 flex items-center w-full p-6">
+				<nav id="navbar" className="z-50 fixed top-0 flex items-center w-full p-6">
 					<TransitionLink href="/" label={<Logo />} />
 					<div className="justify-end w-full flex items-center gap-x-2 sm:hidden">
 						<div className={`${styles.menuIcon}`}>
