@@ -51,22 +51,25 @@ export default function NavMenu(props: NavMenuProps) {
 		toggle ? tl.current.play() : tl.current.reverse();
 	}, [toggle])
 
-	
+	const handleClose = () => {
+		// @ts-ignore
+		tl.current.reverse();
+	}
 
 	return (
 		<>
 			<div ref={container} className="fixed h-screen w-full overflow-x-hidden z-50">
 				<ul className='w-full h-full uppercase flex flex-col justify-center items-center text-6xl gap-20 relative z-10'>
-					<Link className="overflow-hidden" href="/">
+					<Link onClick={handleClose} className="overflow-hidden" href="/">
 						<li className='menu-list'>Accueil</li>
 					</Link>
-					<Link className="overflow-hidden" href="/projets">
+					<Link onClick={handleClose} className="overflow-hidden" href="/projets">
 						<li className='menu-list'>Projets</li>
 					</Link>
-					<Link className="overflow-hidden" href="/contact">
+					<Link onClick={handleClose} className="overflow-hidden" href="/contact">
 						<li className='menu-list'>Contact</li>
 					</Link>
-					<Link className="overflow-hidden" href="/projets">
+					<Link onClick={handleClose} className="overflow-hidden" href="/projets">
 						<li className='menu-list'>Presentation</li>
 					</Link>
 				</ul>
