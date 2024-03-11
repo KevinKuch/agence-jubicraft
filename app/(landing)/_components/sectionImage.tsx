@@ -73,7 +73,7 @@ const Section2 = () => {
 ]
 
 	return ( 
-		<div ref={container} className={`${styles.container} h-300 bg-violet-50`}>
+		<div ref={container} className={`${styles.container} h-300`}>
 			<div className={styles.sticky}>
 				{
 					// On map les images pour les afficher
@@ -87,6 +87,7 @@ const Section2 = () => {
 								fill
 								alt='images'
 								placeholder='blur'
+								sizes='(max-width: 768px) 100vw, 768px'
 							/>
 						</div>
 					</motion.div>

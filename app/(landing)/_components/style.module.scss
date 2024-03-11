@@ -2,6 +2,28 @@
 
 .main {
 	overflow-x : hidden;
+
+	.bigText {
+		font-size: 2.25rem;
+		font-size: clamp(2.25rem, 0.2105263157894739rem + 10.197368421052632vw, 10rem);
+	}
+
+	.secondText {
+		font-size: 2.25rem;
+		font-size: clamp(2.25rem, 0.736842105263158rem + 7.565789473684211vw, 8rem);
+	}
+
+	.subText {
+		font-size: 1rem;
+		font-size: clamp(1rem, 0.4736842105263158rem + 2.631578947368421vw, 3rem);
+		text-align: center;
+	}
+
+	.placeText {
+		font-size: 0.6rem;
+		font-size: clamp(0.6rem, 0.49473684210526314rem + 0.5263157894736842vw, 1rem);
+	}
+
 	
 	.popupContainer {
 		

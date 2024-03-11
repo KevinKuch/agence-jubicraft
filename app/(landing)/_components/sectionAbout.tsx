@@ -42,7 +42,7 @@ const About = () => {
 	// Variante de l'animation pour le texte Revealing
 	const slideUpText = {
 		initial: {y: "100%"},
-		animate: (i: number) => ({y: 0 , transition: {duration: 0.4, delay: i * 0.02}}),
+		animate: (i: number) => ({y: 0 , transition: {duration: 0.4, delay: i * 0.04}, delay:5}),
 		hidden: {y: "100%"}
 	}
 

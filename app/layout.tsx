@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Telex } from "next/font/google";
 
@@ -8,6 +9,7 @@ import { Footer } from "./components/footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { AppProps } from "next/app";
 import { Router } from "next/router";
+import  Template  from "./template";
 
 const telex = Telex({ 
 	subsets: ["latin"],
@@ -37,7 +39,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ 
 	children,
 }: Readonly<{
-	
 	children: React.ReactNode;
 }>) {
 
@@ -45,7 +46,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={telex.className}>
 				<Navbar />
-					{children}
+				{children}
 				<Footer />
 			</body>
 		</html>

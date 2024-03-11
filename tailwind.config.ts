@@ -29,11 +29,19 @@ const config = {
 				'rubik-doodle': ['Rubik Doodle Shadow', 'system-ui'],
 				'heebo': ['Heebo', 'sans-serif'],
 			},
-			mainColor: {
+
+			textColor: {
 				skin: {
-					base: '	#613870',
+					base: 'var(--color-text-base)',
 				}
 			},
+			backgroundColor: {
+				skin: {
+					base: 'var(--background-custom)',
+					secondary: 'var(--color-secondary)',
+				}
+			},
+
 			colors: {
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
