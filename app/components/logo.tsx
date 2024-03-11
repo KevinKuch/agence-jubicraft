@@ -1,14 +1,4 @@
 import Image from "next/image";
-import { Trirong } from "next/font/google";
-
-import { cn } from "@/lib/utils";
-
-// La police Trirong est utilisée pour le logo
-// La police est chargée avec les poids 400 et 600
-const font = Trirong({
-	subsets: ["latin"],
-	weight: ["400", "600"],
-});
 
 export const Logo = () => {
 	return (
@@ -17,8 +7,8 @@ export const Logo = () => {
 			<Image 
 				className="cursor-pointer"
 				src="/jc-logo.svg" 
-				height="150"
-				width="150" 
+				height="200"
+				width="200" 
 				alt="Jubilee Craft Logo" 
 			/>
 		</div>

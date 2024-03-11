@@ -5,10 +5,10 @@ import TwitterIcon from "../public/twitter-logo.svg";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-violet-200 h-[70vh] lg:h-[80vh] w-full relative">
+		<footer className="h-[70vh] lg:h-[80vh] w-full relative">
 			<div className="mx-2 md:mx-6 lg:mx-12 max-w-[1600px]">
 				<h1 className="font-trirong font-black pt-16 pb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Débuter un projet</h1>
-				<hr className="h-px my-8 bg-[#60386E] border-0"/>
+				<hr className="bg-white h-px my-8 border-0"/>
 				<div className="pt-12 flex justify-between">
 					<ul className="text-2xl md:text-3xl lg:text-4xl">
 						<Link href="/">
@@ -40,7 +40,7 @@ export const Footer = () => {
 				<ul className="text-center space-y-2 lg:text-left">
 					<li>Conditions d'utilisation</li>
 					<li>Politique de confidentialité</li>
-					<hr className="lg:hidden h-px my-8 bg-[#60386E] border-0"/>
+					<hr className="lg:hidden h-px my-8 border-0"/>
 					<li>©2024 Kevin Kuch. Tous droits réservés.</li>
 				</ul>
 			</div>

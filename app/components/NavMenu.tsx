@@ -70,8 +70,8 @@ export default function NavMenu(props: NavMenuProps) {
 						<li className='menu-list'>Presentation</li>
 					</Link>
 				</ul>
-				<span id="bannerOne" className='bg-[#9A3A6C] h-full absolute top-0 left-0 w-1/2 z-0'></span>
-				<span id="bannerTwo" className='bg-[#9A3A6C] h-full absolute top-0 left-1/2 w-1/2 z-0'></span>
+				<span id="bannerOne" className='bg-skin-secondary h-full absolute top-0 left-0 w-1/2 z-0'></span>
+				<span id="bannerTwo" className='bg-skin-secondary h-full absolute top-0 left-1/2 w-1/2 z-0'></span>
 			</div>
 		</>
 	)

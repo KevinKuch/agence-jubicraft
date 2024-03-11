@@ -11,7 +11,7 @@ import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useEffect, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import NavMenu from './NavMenu';
 
 
@@ -31,18 +31,38 @@ export default function Navbar() {
 		// console.log("menu clicked");
 	}
 
+	useEffect(() => {
+		let tl = gsap.timeline({paused: true});
+
+		if (menuClicked) {
+			tl.from("#navbar", {
+				backgroundColor: "#9A3A6C",
+				duration: 0.4,
+				ease: "sine.inOut",
+				delay: 0.2,
+			})
+		} else {
+			tl.from("#navbar", {
+				backgroundColor: "transparent",
+				duration: 0.4,
+				ease: "sine.inOut",
+				delay: 0.2,
+			})
+		}
+	}, [menuClicked])
+
 
 	return (
 		<>
 			<header>
 				<NavMenu toggle={menuClicked}/>
-				<nav className="z-50 bg-background fixed top-0 flex items-center w-full p-6">
+				<nav id="navbar" className="z-50 bg-background fixed top-0 flex items-center w-full p-6">
 					<Link href="/">
 						<Logo />
 					</Link>
 					<div className="justify-end w-full flex items-center gap-x-2 sm:hidden">
 						<div className={`${styles.menuIcon}`}>
-							<span onClick={handleNavOpen} className='cursor-pointer border-2 border-[#613870] rounded-full p-[0.2rem] px-4 z-100'>
+							<span onClick={handleNavOpen} className='cursor-pointer border-2 bg-skin-secondary rounded-full p-[0.2rem] px-4 z-100'>
 								<span className='menuText uppercase'>
 									{menuClicked ? "Close" : "Menu"}
 								</span>
