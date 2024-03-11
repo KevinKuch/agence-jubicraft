@@ -37,7 +37,9 @@ export default function Navbar() {
 			<header>
 				<NavMenu toggle={menuClicked}/>
 				<nav className="z-50 bg-background fixed top-0 flex items-center w-full p-6">
-					<Logo />
+					<Link href="/">
+						<Logo />
+					</Link>
 					<div className="justify-end w-full flex items-center gap-x-2 sm:hidden">
 						<div className={`${styles.menuIcon}`}>
 							<span onClick={handleNavOpen} className='cursor-pointer border-2 border-[#613870] rounded-full p-[0.2rem] px-4 z-100'>
