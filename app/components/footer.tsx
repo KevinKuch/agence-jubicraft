@@ -1,25 +1,20 @@
-import { Button } from "@/lib/ui/button";
+import styles from "./style.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import TwitterIcon from "../public/twitter-logo.svg";
+import TransitionLink from "./TransitionLink";
 
 export const Footer = () => {
 	return (
-		<footer className="h-[70vh] lg:h-[80vh] w-full relative">
-			<div className="mx-2 md:mx-6 lg:mx-12 max-w-[1600px]">
+		<footer className="w-full relative">
+			<div className="mx-2 md:mx-6 lg:mx-12">
 				<h1 className="font-trirong font-black pt-16 pb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Débuter un projet</h1>
 				<hr className="bg-white h-px my-8 border-0"/>
-				<div className="pt-12 flex justify-between">
-					<ul className="text-2xl md:text-3xl lg:text-4xl">
-						<Link href="/">
-							<li className="pb-4">Projets</li>
-						</Link>
-						<Link href="/">
-							<li className="pb-4">Contact</li>
-						</Link>
-						<Link href="/">
-							<li className="pb-4">Présentation</li>
-						</Link>
+				<div className="flex justify-between">
+					<ul className="text-xl md:text-3xl lg:text-4xl flex flex-col items-start gap-8">
+						<TransitionLink href="/projets" label="Projets"/>
+						<TransitionLink href="/contact" label="Contact"/>
+						<TransitionLink href="/presentation" label="Presentation"/>
 					</ul>
 					<div className="relative">
 						<h2 className="pb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl">Suivez nos médias sociaux</h2>
@@ -30,17 +25,17 @@ export const Footer = () => {
 							<li><Image src="/linkedin-icon.svg" alt="Linkedin icon" width={34} height={34}/></li>
 							<li><Image src="/youtube-icon.svg" alt="Youtube icon" width={36} height={36}/></li>
 						</ul>
-						<div className="absolute bottom-0 top-40">
-							<Image src="/jc-logo-initial.svg" alt="Jubilee Craft logo" width={500} height={500}/>
+						<div className="relative w-full max-w-[500px] aspect-[70/45]">
+							<Image src="/jc-logo-initial.svg" alt="Jubilee Craft logo" fill/>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="absolute bottom-0 mx-2 md:mx-6 lg:mx-12 pb-4">
-				<ul className="text-center space-y-2 lg:text-left">
+			<div className="mx-2 md:mx-6 lg:mx-12 pb-4">
+				<ul className={`${styles.footerConditions} text-center lg:text-left`}>
 					<li>Conditions d'utilisation</li>
 					<li>Politique de confidentialité</li>
-					<hr className="lg:hidden h-px my-8 border-0"/>
+					<hr className="lg:hidden h-px my-2 border-0 bg-white"/>
 					<li>©2024 Kevin Kuch. Tous droits réservés.</li>
 				</ul>
 			</div>
