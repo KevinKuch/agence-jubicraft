@@ -19,8 +19,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/public*": ["./public/*"],
-      "@/components*": ["./components*"],
+      "@/public/*": ["./app/public/*"],
+      "@/components/*": ["./app/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/NavMenu.js"],

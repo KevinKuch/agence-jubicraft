@@ -40,7 +40,7 @@ export default function NavMenu(props: NavMenuProps) {
 			duration: 0.7,
 			ease: "power4.out",
 			stagger: {
-				amount: 0.1,
+				amount: 0.2,
 			}
 		})
 
