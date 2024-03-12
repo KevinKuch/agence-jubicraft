@@ -36,7 +36,7 @@ import TransitionLink from "./TransitionLink";
 			</div>
 			<div className="mx-2 md:mx-6 lg:mx-12 pb-4">
 				<ul className={`${styles.footerConditions} text-center lg:text-left`}>
-					<li>Conditions d'utilisation</li>
+					<li>Conditions d&lsquo;utilisation</li>
 					<li>Politique de confidentialité</li>
 					<hr className="lg:hidden h-px my-2 border-0 bg-white"/>
 					<li>©2024 Kevin Kuch. Tous droits réservés.</li>

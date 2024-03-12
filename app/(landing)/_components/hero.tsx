@@ -57,7 +57,7 @@ export const Hero = () => {
 				<motion.div variants={variant1} initial="hidden" animate="visible" className="text-container relative">
 					<motion.div className="overflow-hidden">
 							<h2 className={`${styles.secondText} uppercase font-heebo font-black`}>
-									Créativité,
+								Créativité,
 							</h2>
 					</motion.div>
 					<motion.div className="overflow-hidden">
