@@ -20,7 +20,7 @@ const TransitionLink: React.FC<Props> = ({ href, label }: Props) => {
 	}
 
 	return (
-		<button className="text-xl text-[#613870] hover:underline" onClick={handleClick}>
+		<button className="hover:underline uppercase" onClick={handleClick}>
 			{label}
 		</button>
 	)
