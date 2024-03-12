@@ -19,10 +19,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/public/*": ["./app/public/*"],
+      "@/public/*": ["./public/*"],
       "@/components/*": ["./app/components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/NavMenu.js"],
   "exclude": ["node_modules"]
 }

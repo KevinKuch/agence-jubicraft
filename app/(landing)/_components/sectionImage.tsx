@@ -2,11 +2,11 @@
 
 import styles from './style.module.scss'
 import Image from 'next/image'
-import Image1 from '../../../public/image1.jpg'
-import Image2 from '../../../public/image2.jpg'
-import Image3 from '../../../public/image3.jpg'
-import Image4 from '../../../public/image4.jpg'
-import Image5 from '../../../public/image5.jpg'
+import Image1 from '@/public/image1.jpg'
+import Image2 from '@/public/image2.jpg'
+import Image3 from '@/public/image3.jpg'
+import Image4 from '@/public/image4.jpg'
+import Image5 from '@/public/image5.jpg'
 import { useEffect, useRef } from 'react'
 import Lenis from '@studio-freight/lenis'
 import { useScroll, useTransform, motion } from 'framer-motion'
@@ -21,7 +21,7 @@ const Section2 = () => {
 	useEffect( () => {
     const lenis = new Lenis()
    
-    function raf(time: any) {
+    function raf(time: number) {
         lenis.raf(time)
         requestAnimationFrame(raf)
     }
@@ -73,7 +73,7 @@ const Section2 = () => {
 ]
 
 	return ( 
-		<div ref={container} className={`${styles.container} h-300 bg-violet-50`}>
+		<div ref={container} className={`${styles.container} h-300`}>
 			<div className={styles.sticky}>
 				{
 					// On map les images pour les afficher
@@ -87,6 +87,7 @@ const Section2 = () => {
 								fill
 								alt='images'
 								placeholder='blur'
+								sizes='(max-width: 768px) 100vw, 768px'
 							/>
 						</div>
 					</motion.div>

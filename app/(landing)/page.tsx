@@ -1,4 +1,5 @@
-import { Footer } from "../../components/footer";
+"use client";
+
 import { Hero } from "./_components/hero";
 import SectionImage from "./_components/sectionImage";
 import About from "./_components/sectionAbout";

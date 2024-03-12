@@ -42,7 +42,7 @@ const Expertise = () => {
 				start: '-350px',
 				end: '.expertise',
 				pin: true,
-				markers: true,
+				// markers: true,
 			})
 		})
 
@@ -57,7 +57,7 @@ const Expertise = () => {
 
 
 	return ( 
-		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full `}>
+		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full pb-12`}>
 			<div ref={container}>
 				<h1 className="font-trirong font-black text-4xl lg:text-7xl max-auto my-16 max-w-[1200px relative inline-flex overflow-hidden"><motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}>Nos Expertise</motion.span></h1>
 			</div>
