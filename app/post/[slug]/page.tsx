@@ -1,5 +1,8 @@
 import { Post } from "@/app/libs/interface";
 import { sanityClient } from "@/app/libs/sanity";
+import { urlFor } from "@/app/libs/sanityImageUrl";
+import { PortableText } from "@portabletext/react"
+import Image from "next/image";
 
 
 async function getData(slug: string) {
@@ -22,6 +25,14 @@ export default async function SlugPage({
 }) {
 	// Determiner les types de données du data retourné par Post
 	const data = await getData(params.slug) as Post;
+
+	const PortableTextComponent = {
+		types: {
+			image: ({value}: {value: any}) => (
+				<Image src={urlFor(value).url()} alt="Image" className="rounded-lg" width={100} height={100}/>
+			)
+		}
+	}
 
 	return (
 		<div className="h-screen pt-[8rem]">
@@ -46,7 +57,7 @@ export default async function SlugPage({
 			<div>
 				<div className="xl:col-span-3 xl:row-span-2 xl:pb-0">
 					<div className="max-w-none pb-8 pt-10">
-						
+						<PortableText value={data.content} components={PortableTextComponent} />
 					</div>
 				</div>
 			</div>
