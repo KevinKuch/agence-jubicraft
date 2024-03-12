@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Post } from "../libs/interface";
 import { sanityClient } from "../libs/sanity";
+import Image from "next/image";
 
 async function getData() {
 	const query = `*[_type == "post"]`;
@@ -23,7 +24,7 @@ export default async function Projets() {
 			<div className="mx-12">
 				<ul>
 					{data.map((post) => (
-						<li key={post._id} className="py-4">
+						<li key={post._id} className="py-4 border border-white">
 							<article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
 								<div>
 									<p className="text-base font-medium leading-6">
@@ -31,6 +32,7 @@ export default async function Projets() {
 									</p>
 								</div>
 								<Link href={`/post/${post.slug.current}`} prefetch className="space-y-3 xl:col-span-3">
+									<Image src={post.image} alt={post.title} width={100} height={100}/>
 									<div>
 										<h3 className="text-2xl font-bold leading-8 tracking-tight text-white">
 											{post.title}

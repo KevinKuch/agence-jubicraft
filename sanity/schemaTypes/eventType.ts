@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const eventType = defineType({
   name: 'post',
@@ -16,6 +16,26 @@ export const eventType = defineType({
 			title: 'Overview',
 		}),
 		defineField({
+			name: 'image',
+			type: 'image',
+			title: 'Image',
+			options: {
+				hotspot: true,
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alternative text',
+					type: 'string',
+				}
+			]
+		}),
+		defineField({
+			name: 'url',
+			title: 'URL',
+			type: 'url',
+		}),
+		defineField({
 			name: 'slug',
 			type: 'slug',
 			title: 'Slug',
@@ -29,19 +49,23 @@ export const eventType = defineType({
 			title: 'Content',
 			of: [
 				{
-				type: 'block',
+					type: 'block',
 				},
 				{
 					type: 'image',
 					fields: [
 						{
-							type: 'text',
 							name: 'alt',
 							title: 'Alternative text',
+							type: 'string',
+							options: {
+								isHighlighted: true,
+							}
 						}
 					]
 				}
-			]
+			],
+			
 		}),
   ],
 })

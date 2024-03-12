@@ -1,7 +1,9 @@
 import { Post } from "@/app/libs/interface";
 import { sanityClient } from "@/app/libs/sanity";
 import { urlFor } from "@/app/libs/sanityImageUrl";
-import { PortableText } from "@portabletext/react"
+// @ts-ignore
+import { PortableText } from '@portabletext/react'
+
 import Image from "next/image";
 
 
