@@ -8,7 +8,10 @@ export const Footer = () => {
 	return (
 		<footer className="w-full relative">
 			<div className="mx-2 md:mx-6 lg:mx-12">
-				<h1 className="font-trirong font-black pt-16 pb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Débuter un projet</h1>
+				<div className="flex justify-between items-center">
+					<h1 className="font-trirong font-black pt-16 pb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Débuter un projet</h1>
+					<iframe src="https://lottie.host/embed/eb5080f1-ffcf-45ee-9451-c16f0869313c/Gk7Nwyy57u.json"></iframe>
+				</div>
 				<hr className="bg-white h-px my-8 border-0"/>
 				<div className="flex justify-between">
 					<ul className="text-xl md:text-3xl lg:text-4xl flex flex-col items-start gap-8">
