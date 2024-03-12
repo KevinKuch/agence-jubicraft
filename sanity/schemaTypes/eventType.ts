@@ -58,9 +58,6 @@ export const eventType = defineType({
 							name: 'alt',
 							title: 'Alternative text',
 							type: 'string',
-							options: {
-								isHighlighted: true,
-							}
 						}
 					]
 				}

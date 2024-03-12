@@ -9,8 +9,8 @@ const LandingPage = () => {
 	return (
 		<div>
 			<Hero />
-			<SectionImage />
 			<About />
+			<SectionImage />
 			<Expertise />
 		</div>
 	);

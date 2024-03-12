@@ -1,7 +1,5 @@
 import styles from "./style.module.scss";
-import Link from "next/link";
 import Image from "next/image";
-import TwitterIcon from "../public/twitter-logo.svg";
 import TransitionLink from "./TransitionLink";
 
  const Footer = () => {

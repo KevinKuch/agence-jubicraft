@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import LandingPage from "./(landing)/page";
+import Footer from "./components/footer";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
 	return (
 		<main>
 			<LandingPage />
+      <Footer/>
 		</main>
 	)
 }

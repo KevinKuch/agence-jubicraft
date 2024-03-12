@@ -57,7 +57,7 @@ const Expertise = () => {
 
 
 	return ( 
-		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full pb-12`}>
+		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full pb-12 bg-skin-secondary`}>
 			<div ref={container}>
 				<h1 className="font-trirong font-black text-4xl lg:text-7xl max-auto my-16 max-w-[1200px relative inline-flex overflow-hidden"><motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}>Nos Expertise</motion.span></h1>
 			</div>
@@ -79,7 +79,7 @@ const Expertise = () => {
 			<div className={`${styles.expertiseList} lg:pt-[4rem] lg:mb-[12rem]`}>
 				{
 					events.map((event, index) => {
-						return <div onMouseOver={() => {setHoverEvents(index)}} className={`${styles.expertiseEl} flex justify-start border-t border-[#613870] uppercase font-black cursor-pointer md:justify-end`} key={`p_${index}`}>
+						return <div onMouseOver={() => {setHoverEvents(index)}} className={`${styles.expertiseEl} flex justify-start border-t  uppercase font-black cursor-pointer md:justify-end`} key={`p_${index}`}>
 							<p className={`${styles.expertTitle} text-xl p-4 md:text-2xl lg:text-3xl`}>{event.title}</p>
 							</div>
 					})

@@ -47,7 +47,7 @@ export default function RootLayout({
 			<body className={telex.className}>
 				<Navbar />
 				{children}
-				<Footer />
+				{/* <Footer /> */}
 			</body>
 		</html>
 	);
