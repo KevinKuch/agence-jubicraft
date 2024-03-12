@@ -1,86 +1,91 @@
 "use client";
 
 import gsap from "gsap";
-import  style  from "./style.module.scss";
+import  styles  from "./style.module.scss";
 import { motion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 export const Hero = () => {
 
 	const variant1 = {
 		// On définit les propriétés de l'animation 
 		// lorsqu'elle est cachée
-		hidden: { opacity: 0, x: -100 },
+		hidden: { 
+			opacity: 0, 
+			y: 100, 
+			transition: {
+				delay: 0.2,
+				staggerChildren: 0.2
+			}
+		},
 		// On définit les propriétés de l'animation
 		// lorsqu'elle est visible
-		visible: { opacity: 1, x: 0 }
+		visible: { 
+			opacity: 1, 
+			y: 0,
+			transition: { delay: 0.8, duration: 0.4} 
+		}
 	};
 
 	const variant2 = {
-		hidden: { opacity: 0, y: -100 },
-		visible: { opacity: 1, y: 0 }
+		hidden: { opacity: 0, y: 100 },
+		visible: { 
+			opacity: 1, 
+			y: 0, 
+			transition: { delay: 0.8, duration: 0.4 }
+		}
 	};
 
-	const popupText = ["Visuelle", "Créative", "Innovante", "Inspirante", "Époustouflante", "Éblouissante", "Élégante"]
-	
-	// On crée une timeline avec gsap
-	let tl = gsap.timeline({ 
-		repeat: -1, // -1 signifie que l'animation se répète à l'infini
-		yoyo: true, // yoyo signifie que l'animation se joue en sens inverse
-	});
-
-	// Animation de la popUp text
-	tl.set("#popup", {
-		scale:0.5, // On met l'échelle à 0 pour que la popUp soit invisible
-		transformOrigin: "50% 50%", // On définit le point de transformation
-	})
-
-	// On anime la popUp
-	tl.to("#popup", {
-		scale:1, // On met l'échelle à 1 pour que la popUp soit visible
-		duration: 2, // On définit la durée de l'animation
-		ease: "bounce.out", // On définit l'ease de l'animation
-		// rotate: 360, // On fait tourner la popUp de 360 degrés
-	})
+	const variant3 = {
+		// On définit les propriétés de l'animation 
+		// lorsqu'elle est cachée
+		hidden: { opacity: 0, scale: 0},
+		// On définit les propriétés de l'animation
+		// lorsqu'elle est visible
+		visible: { 
+			opacity: 1, 
+			scale: 1,
+			ExpoScaleEaseease: "easeInOut",
+			transition: { delay: 0.8, duration: 0.4 } 
+		}
+	};
 
 	return (
-		<div className={`${style.main} h-screen w-full space-y-4 pt-[8rem]`}>
-			<div className="absolute top-0 -z-10 h-full w-full">
-				<div className="absolute bottom-auto left-0 right-0 top-0 h-[50rem] w-[50rem] -translate-x-[60%] translate-y-[20%] rounded-full bg-[rgba(193,145,247,0.94)] opacity-50 dark:opacity-20 blur-[200px]">
+    <div className={`${styles.main} min-h-screen w-full pt-[8rem] relative`}>
+        <div className="flex flex-col justify-center pt-2 pl-12 lg:mx-12">
+				<motion.div variants={variant1} initial="hidden" animate="visible" className="text-container relative">
+					<motion.div className="overflow-hidden">
+							<h2 className={`${styles.secondText} uppercase font-heebo font-black`}>
+									Créativité,
+							</h2>
+					</motion.div>
+					<motion.div className="overflow-hidden">
+							<h1 className={`${styles.secondText} font-bold uppercase font-heebo `}>
+									Visionnement
+							</h1>
+					</motion.div>
+					<motion.div className="overflow-hidden">
+							<motion.h2 variants={variant2} initial="hidden" animate="visible" className={`${styles.bigText} uppercase font-rubik-doodle font-black `}>
+									Impéccable
+							</motion.h2>
+					</motion.div>
+				</motion.div>
+					<motion.h3 variants={variant2} initial="hidden" animate="visible" className={`${styles.subText} font-bold pt-[3rem]`}>
+							Agence de création évènementielle
+					</motion.h3>
+					<motion.div variants={variant3} initial="hidden" animate="visible" className="absolute bottom-0 left-20 sm:top-[2rem] sm:left-[23rem] lg:top-[-50px] lg:left-[34rem] max-w-[1200px]">
+						<iframe className="mx-auto w-[60vw] h-[60vh] lg:w-[80vw] lg:h-[85vh]" src="https://lottie.host/embed/39972fb0-b576-488c-89e9-62426c91722a/VpRm4oesTK.json"></iframe>
+					</motion.div>
+        </div>
+
+				<div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pb-6 flex justify-around items-center gap-12 w-full max-w-[1500px]">
+				<motion.div variants={variant2} initial="hidden" animate="visible" className="flex-none relative w-full max-w-[200px] aspect-[70/45]">
+						<Image className="w-52" src="/jc-logo-initial.svg" alt="Jubilee Craft logo" fill />
+				</motion.div>
+					<motion.p variants={variant2} initial="hidden" animate="visible" className={`${styles.placeText} uppercase`}>Montreal, Toronto et Quebec</motion.p>
 				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[200%] translate-y-[20%] rounded-full bg-[rgba(248,190,233,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[70%] translate-y-[80%] rounded-full bg-[rgba(247,156,223,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[0%] translate-y-[10%] rounded-full bg-[rgba(239,185,255,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-				<div className="absolute bottom-auto left-auto right-0 top-0 h-[50rem] w-[50rem] -translate-x-[10%] translate-y-[0%] rounded-full bg-[rgba(202,160,214,0.84)] opacity-50 dark:opacity-20 blur-[200px]">
-				</div>
-			</div>
-			<motion.div
-				initial="hidden"
-				whileInView="visible"
-				variants={variant1}
-				className="z-10 space-y-3 md:space-y-8 lg:space-y-12 flex flex-col justify-center items-center"
-			>
-				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pr-[32rem] 2xl:text-9xl  2xl:pr-[40rem]">Créativité,</h1>
-				<h1 className="font-bold uppercase font-rubik-doodle text-3xl xsm:text-[3.5rem] sm:text-6xl  md:text-7xl lg:text-8xl lg:pr-[4rem]  1xl:text-[8.5rem] 2xl:pr-[1rem] bg-[#CCE9FF] dark:text-skin-base origin-bottom-left -rotate-[4deg] lg:translate-y-8 p-2">Visionnement</h1>
-				<h1 className="font-bold uppercase font-trirong text-3xl xsm:text-5xl sm:text-5xl md:text-6xl lg:text-7xl lg:pl-[30rem] 2xl:text-9xl 2xl:pl-[34rem]">Impéccable</h1>
-				<h3 className="sm:text-3xl font-medium pt-[3rem]">
-					Agence de création évenementielle
-				</h3>
-			</motion.div>
-			<div className={`${style.popupContainer} flex justify-center items-center text-xs sm:text-sm lg:text-md font-bold`}>
-				{/* map the popup text */}
-				<div className={`${style.popupElement}`}>
-				{popupText.map((text, index) => {
-					return (
-						<p id="popup" key={index} className={`${style.popup} border-2 border-[#613870] rounded-[2rem] lg:p-3`}>
-							{text}
-						</p>
-					)
-				})}
-				</div>
-			</div>
-		</div>
-	);
+  </div>
+);
+
 };

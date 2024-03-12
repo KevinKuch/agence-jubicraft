@@ -1,8 +1,15 @@
+
 import type { Metadata } from "next";
-import { Telex } from "@next/font/google";
+import { Telex } from "next/font/google";
+
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import Navbar from "../components/navbar";
+
+import Navbar from "./components/navbar";
+import  Footer  from "./components/footer";
+import { motion, AnimatePresence } from "framer-motion";
+import { AppProps } from "next/app";
+import { Router } from "next/router";
+import  Template  from "./template";
 
 const telex = Telex({ 
 	subsets: ["latin"],
@@ -29,25 +36,18 @@ export const metadata: Metadata = {
 	}
 };
 
-export default function RootLayout({
+export default function RootLayout({ 
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+
 	return (
 		<html lang="en">
 			<body className={telex.className}>
-			{/* Provenant du shadcn Theme du /components/providers/theme-provider.tsx */}
-			<ThemeProvider
-			attribute="class"
-			defaultTheme="system"
-			enableSystem
-			disableTransitionOnChange
-			storageKey="jc-theme"
-			>
 				<Navbar />
 				{children}
-			</ThemeProvider>
+				<Footer />
 			</body>
 		</html>
 	);
