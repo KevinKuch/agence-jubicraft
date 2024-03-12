@@ -11,7 +11,14 @@ async function getData(slug: string) {
 	// Requête pour fetch les données d'un post spécifique
 	// Le slug est un paramètre dynamique
 	// Ajout un [0] pour fetch le premier post qui match le slug selon sanity
-	const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
+	const query = `*[_type == "post" && slug.current == "${slug}"][0] {
+		_id,
+		title,
+		overview,
+		_createdAt,
+		"slug": slug.current,
+		"image": image.asset->url
+	}`;
 
 	// Cette data provient de l'API client de Sanity dans libs/sanity.ts
 	const data = await sanityClient.fetch(query);
@@ -36,6 +43,8 @@ export default async function SlugPage({
 		}
 	}
 
+	// console.log(data);
+
 	return (
 		<div className="h-screen pt-[8rem]">
 			<header className="pt-6 xl:pb-6">
@@ -43,14 +52,14 @@ export default async function SlugPage({
 					<div className="space-y-10">
 						<div>
 							<p className="text-base font-medium leading-6 text-white">
-							{new Date(data._createdAt).toISOString().split("T")[0]}
+							{/* {new Date(data._createdAt).toISOString().split("T")[0]} */}
 							</p>
 						</div>
 					</div>
 
 					<div>
 						<h1 className="text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-							{data.title}
+							{/* {data.title} */}
 						</h1>
 					</div>
 				</div>
@@ -59,7 +68,7 @@ export default async function SlugPage({
 			<div>
 				<div className="xl:col-span-3 xl:row-span-2 xl:pb-0">
 					<div className="max-w-none pb-8 pt-10">
-						<PortableText value={data.content} components={PortableTextComponent} />
+						{/* <PortableText value={data.content} components={PortableTextComponent} /> */}
 					</div>
 				</div>
 			</div>

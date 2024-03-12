@@ -7,6 +7,6 @@ export interface Post {
 		current: string;
 	};
 	_createdAt: string;
-	image: string;
+	image: any;
 	url: string;
 }
