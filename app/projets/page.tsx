@@ -33,7 +33,7 @@ export default async function Projets() {
 			</div>
 			<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mx-12">
 				{data.map((post, index) => (
-					<div key={index} className="flex flex-col justify-center items-center p-4 border border-white bg-skin-secondary rounded-xl">
+					<div key={index} className="flex flex-col justify-center items-center p-4 bg-skin-secondary rounded-xl">
 						<Link href={`/projets/${post.slug}`}>
 								<div className="relative w-full h-80">
 									<Image

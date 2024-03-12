@@ -39,6 +39,8 @@ const config = {
 				skin: {
 					base: 'var(--background-custom)',
 					secondary: 'var(--color-secondary)',
+					primary: 'var(--color-primary)',
+					third: 'var(--color-third)',
 				}
 			},
 
