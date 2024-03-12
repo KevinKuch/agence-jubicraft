@@ -1,10 +1,19 @@
 import Link from "next/link";
 import { Post } from "../libs/interface";
 import { sanityClient } from "../libs/sanity";
+import { urlFor } from "@/app/libs/sanityImageUrl";
 import Image from "next/image";
 
+
 async function getData() {
-	const query = `*[_type == "post"]`;
+	const query = `*[_type == "post"] {
+		_id,
+		title,
+		overview,
+		_createdAt,
+		"slug": slug.current,
+		"image": image.asset->url
+	}`;
 
 	const data = await sanityClient.fetch(query);
 
@@ -15,6 +24,15 @@ export default async function Projets() {
 
 	// Determiner les types de données du data retourné par Post
 	const data = (await getData()) as Post[];
+	// console.log(data);
+
+	const PortableTextComponent = {
+		types: {
+			image: ({value}: {value: any}) => (
+				<Image src={urlFor(value).url()} alt="Image" className="rounded-lg" width={100} height={100}/>
+			)
+		}
+	}
 
 	return ( 
 		<section className="h-screen w-full pt-[8rem]">
@@ -31,8 +49,9 @@ export default async function Projets() {
 										{new Date(post._createdAt).toISOString().split("T")[0]}
 									</p>
 								</div>
+							
+								<Image src={urlFor(post.image).url()} alt={post.title} width={100} height={100}/>
 								<Link href={`/post/${post.slug.current}`} prefetch className="space-y-3 xl:col-span-3">
-									<Image src={post.image} alt={post.title} width={100} height={100}/>
 									<div>
 										<h3 className="text-2xl font-bold leading-8 tracking-tight text-white">
 											{post.title}
