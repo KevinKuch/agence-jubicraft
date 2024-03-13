@@ -3,7 +3,7 @@
 import styles from './style.module.scss';
 import { Logo } from "@/app/components/logo";
 import { useScrollTop } from "@/app/components/use-nav-scroll"; 
-import TransitionLink from './transitionLink';
+import TransitionLink from './TransitionLink';
 
 import gsap from 'gsap';
 

@@ -23,6 +23,6 @@
       "@/components/*": ["./app/components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/NavMenu.js"],
+  "include": ["next-env.d.ts", "**/*.{ts,tsx,js,jsx}", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

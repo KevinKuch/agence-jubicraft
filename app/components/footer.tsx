@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 import Image from "next/image";
-import TransitionLink from "./transitionLink";
+import TransitionLink from "./TransitionLink";
 
 
  const Footer = () => {
