@@ -17,7 +17,7 @@ export default function ContactPage(){
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2">
                 <div className="relative">
-                  <label for="name" className="leading-7 text-sm text-white">
+                  <label htmlFor="name" className="leading-7 text-sm text-white">
                     Name
                   </label>
                   <input
@@ -31,7 +31,7 @@ export default function ContactPage(){
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="leading-7 text-sm text-white"
                   >
                     Email
@@ -47,7 +47,7 @@ export default function ContactPage(){
               <div className="p-2 w-full">
                 <div className="relative">
                   <label
-                    for="message"
+                    htmlFor="message"
                     className="leading-7 text-sm text-white"
                   >
                     Message
