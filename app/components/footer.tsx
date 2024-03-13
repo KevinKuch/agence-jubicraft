@@ -2,6 +2,7 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 import TransitionLink from "./transitionLink";
 
+
  const Footer = () => {
 	return (
 		<footer className="w-full relative">
