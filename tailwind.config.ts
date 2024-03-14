@@ -19,7 +19,6 @@ const config: Config = {
 				"1xl": "1400px",
 				"xsm": "400px",
 			},
-
 			fontFamily: {
 				'trirong': ['Trirong', 'serif'],
 				'telex': ['Telex', 'sans-serif'],
@@ -27,15 +26,17 @@ const config: Config = {
 				'rubik-doodle': ['Rubik Doodle Shadow', 'system-ui'],
 				'heebo': ['Heebo', 'sans-serif'],
 			},
-
 			textColor: {
 				skin: {
 					base: 'var(--color-text-base)',
+					primary: 'var(--color-text-primary)',
+					secondary: 'var(--color-text-secondary)',
+					third: 'var(--color-text-third)',
 				}
 			},
 			backgroundColor: {
 				skin: {
-					base: 'var(--background-custom)',
+					base: 'hsl(var(--background-custom))',
 					secondary: 'var(--color-secondary)',
 					primary: 'var(--color-primary)',
 					third: 'var(--color-third)',
