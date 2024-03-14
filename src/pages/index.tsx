@@ -1,11 +1,15 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Telex } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const telex = Telex({ 
+	subsets: ["latin"],
+	weight: ['400'], 
+});
+
 
 export default function Home() {
   return (
-    <main>
+    <main className={`${telex.className} min-h-screen bg-skin-base`}>
      <h1 className="">NEXT</h1>
     </main>
   );

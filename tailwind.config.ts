@@ -36,7 +36,7 @@ const config: Config = {
 			},
 			backgroundColor: {
 				skin: {
-					base: 'hsl(var(--background-custom))',
+					base: 'var(--background-custom)',
 					secondary: 'var(--color-secondary)',
 					primary: 'var(--color-primary)',
 					third: 'var(--color-third)',
