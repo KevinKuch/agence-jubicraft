@@ -1,6 +1,26 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import "@/styles/styles.scss";
+import Link from "next/link";
+import { ComponentType } from "react";
+import { AppProps } from 'next/app';
+import { Router } from 'next/router';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import { AnimatePresence } from "framer-motion";
+import Navbar from "@/components/navbar";
+
+interface MyAppProps extends AppProps {
+  router: Router;
+}
+
+export default function App({ Component, pageProps, router }: MyAppProps) {
+  return (
+    <div className="main">
+      <header>
+        <Navbar />
+      </header>
+      <AnimatePresence mode='wait'>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+    </div>
+  )
 }

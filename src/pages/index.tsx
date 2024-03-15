@@ -10,7 +10,7 @@ const telex = Telex({
 export default function Home() {
   return (
     <main className={`${telex.className} min-h-screen bg-skin-base`}>
-     <h1 className="">NEXT</h1>
+    
     </main>
   );
 }
