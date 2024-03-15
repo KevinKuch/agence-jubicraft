@@ -14,7 +14,7 @@ export default function Projets() {
 								<Image
 									src="/image2.jpg"
 									alt="Title"
-									layout="fill"
+									fill
 								/>
 							</div>
 							<h2 className="text-2xl font-bold mt-4">Title</h2>
