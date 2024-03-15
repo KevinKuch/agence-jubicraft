@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+export const revalidate = 30; // revalidate at most 30 seconds
 
 export default function Projets({ data }: { data: unProjetCard[] }) {
 	
@@ -40,21 +41,28 @@ export default function Projets({ data }: { data: unProjetCard[] }) {
   );
 }
 
-export async function getServerSideProps() {
-  // Fetch data from Sanity
-  const query = `
-    *[_type == 'projets'] | order(_createdAt desc) {
-      title,
-      overview,
-      'currentSlug': slug.current,
-      titleImage
-    }`;
+/**
+ * Récupère les données des projets côté serveur.
+ * @returns {Promise<{data: unProjetCard[]}>} Les données des projets.
+ */
+  export async function getServerSideProps() {
+    // Fetch data from Sanity
+    const query = `
+      *[_type == 'projets'] | order(_createdAt desc) {
+        title,
+        overview,
+        'currentSlug': slug.current,
+        titleImage
+      }`;
 
-  const data: unProjetCard[] = await client.fetch(query);
+    // Récupère les données des projets depuis Sanity
+    const data: unProjetCard[] = await client.fetch(query);
 
-  return {
-    props: {
-      data,
-    },
-  };
-}
+    return {
+      // Renvoie les données des projets comme propriété
+      props: {
+        data,
+        revalidate: 30, // Revalider toutes les 30 secondes pour obtenir des données mises à jour
+      },
+    };
+  }

@@ -41,33 +41,48 @@ export default function UnProjetInfo({ data }: { data: unProjetInfo }) {
   );
 }
 
-export async function getStaticPaths() {
-  // Fetch paths for dynamic routes
-  const query = `*[_type == "projets"]{ "slug": slug.current }`;
-  const pathsData = await client.fetch(query);
-  const paths = pathsData.map((project: { slug: string }) => ({
-    params: { slug: project.slug },
-  }));
+/**
+ * Récupère les chemins pour les routes dynamiques.
+ * @returns {Promise<{ paths: { params: { slug: string } }[], fallback: boolean }>} Les chemins des routes dynamiques.
+ */
+	export async function getStaticPaths() {
+		// Fetch paths for dynamic routes
+		const query = `*[_type == "projets"]{ "slug": slug.current }`;
+		const pathsData = await client.fetch(query);
 
-  return {
-    paths,
-    fallback: false, // Show 404 for pages not generated at build time
-  };
-}
+		// Transforme les données des projets en tableau de chemins attendu par Next.js
+		const paths = pathsData.map((project: { slug: string }) => ({
+			params: { slug: project.slug },
+		}));
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const query = `
-    *[_type == "projets" && slug.current == '${params.slug}'] {
-        "currentSlug": slug.current,
-          title,
-          content,
-          titleImage
-      }[0]`;
+		return {
+			// Renvoie les chemins des routes dynamiques et définit fallback à false pour afficher une 404 si la page n'est pas trouvée
+			paths,
+			fallback: false,
+		};
+	}
 
-  const data = await client.fetch(query);
+	/**
+	 * Récupère les données d'un projet spécifique.
+	 * @param {object} params Les paramètres de la requête, contenant le slug du projet.
+	 * @returns {Promise<{ props: { data: unProjetInfo }, revalidate: number }>} Les données du projet.
+	 */
+	export async function getStaticProps({ params }: { params: { slug: string } }) {
+		// Construit la requête pour récupérer les données du projet avec le slug spécifié
+		const query = `
+			*[_type == "projets" && slug.current == '${params.slug}'] {
+				"currentSlug": slug.current,
+				title,
+				content,
+				titleImage
+			}[0]`;
 
-  return {
-    props: { data },
-    revalidate: 30, // Revalidate every 30 seconds
-  };
-}
+		// Récupère les données du projet depuis Sanity
+		const data = await client.fetch(query);
+
+		return {
+			// Renvoie les données du projet comme propriété, avec une option de revalidation pour la régénération des données
+			props: { data },
+			revalidate: 30, // Revalider toutes les 30 secondes pour obtenir des données mises à jour
+		};
+	}
