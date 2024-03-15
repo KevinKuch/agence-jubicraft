@@ -9,7 +9,7 @@ export default function ContactPage(){
                 Contactez-nous!
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-white">
-                Pour toute question ou demande de renseignements, n'hésitez pas à nous contacter.
+                Pour toute question ou demande de renseignements, n&apos;hésitez pas à nous contacter.
               </p>
             </div>
             <div className="lg:w-1/2 md:w-2/3 mx-auto">
