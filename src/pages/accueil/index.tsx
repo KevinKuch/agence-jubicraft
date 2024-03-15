@@ -4,8 +4,8 @@ import styles from '@/pages/accueil/styles.module.scss';
 import  Hero  from './_components/hero';
 import SectionImage from './_components/sectionImage';
 import SectionAbout from './_components/sectionAbout';
-import { useEffect } from 'react';
 import SectionExpertise from './_components/sectionExpertise';
+import { useEffect } from 'react';
 
 
 
