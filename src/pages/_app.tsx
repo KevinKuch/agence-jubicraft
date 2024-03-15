@@ -24,7 +24,7 @@ export default function App({ Component, pageProps, router }: MyAppProps) {
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
       <footer>
-        <Footer />
+        <Footer/>
       </footer>
     </div>
   )

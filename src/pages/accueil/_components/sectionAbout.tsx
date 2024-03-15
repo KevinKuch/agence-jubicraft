@@ -29,7 +29,6 @@ export default function SectionAbout(){
 						// markers: true, 
 				},
 				// effet départ
-				opacity: 0.2,
 				stagger: 0.1,
 				duration: 6,
 		});
@@ -68,10 +67,10 @@ export default function SectionAbout(){
 				</div>
 			</div>
 			<div className={`${styles.imgContainer}`}>
-				<div data-scroll data-scroll-speed="0.1" className={`${styles.imgElement}`}>
+				<div data-scroll data-scroll-speed="0.2" className={`${styles.imgElement}`}>
 					<Image src={ImageAbout} fill alt="image-about" />
 				</div>
-				<div data-scroll data-scroll-speed="0.1" className={`${styles.imgElement} `}>
+				<div data-scroll data-scroll-speed="0.2" className={`${styles.imgElement} `}>
 					<Image src={ImageAbout2} fill alt="image-about" />
 				</div>
 			</div>
