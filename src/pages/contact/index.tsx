@@ -1,6 +1,8 @@
+import Transition from "@/components/transition";
 
 export default function ContactPage(){
 	return ( 
+    <Transition>
       <div className="h-screen w-full pt-[8rem] bg-skin-base">
         <section className="text-gray-700 body-font relative">
           <div className="container px-5 py-24 mx-auto">
@@ -135,5 +137,6 @@ export default function ContactPage(){
           </div>
         </section>
       </div>
+    </Transition>
 	 );
 }

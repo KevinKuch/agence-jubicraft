@@ -1,0 +1,21 @@
+.inner {
+	background-color: black;
+	.page {
+		min-height: calc(100vh - 80px);
+		background-color: white;
+	}
+	.slide {
+		position: fixed;
+		top:0;
+		left:0;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--background-custom);
+		z-index: 3;
+	}
+}
+
+
+
+
+

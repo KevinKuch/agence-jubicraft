@@ -17,15 +17,11 @@ export default function App({ Component, pageProps, router }: MyAppProps) {
 
   return (
     <div className="main">
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
       <AnimatePresence mode='wait'>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
-      <footer>
-        <Footer/>
-      </footer>
+      <Footer/>
     </div>
   )
 }

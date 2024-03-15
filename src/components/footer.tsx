@@ -6,7 +6,7 @@ import Image from "next/image";
 
  export default function Footer() {
 	return (
-		<div className="w-full relative bg-skin-base text-white">
+		<footer className="w-full relative bg-skin-base text-white">
 			<div className="mx-2 md:mx-6 lg:mx-12">
 				<div className="flex justify-between items-center">
 					<h1 className="font-trirong font-black pt-16 pb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Débuter un projet</h1>
@@ -42,6 +42,6 @@ import Image from "next/image";
 					<li>©2024 Kevin Kuch. Tous droits réservés.</li>
 				</ul>
 			</div>
-		</div>
+		</footer>
 	);
 };

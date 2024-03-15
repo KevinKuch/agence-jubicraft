@@ -44,7 +44,7 @@ export default function SectionAbout(){
 	}
 
 	return ( 
-		<section ref={container} className={`${styles.about} h-[130vh] lg:h-[200vh] overflow-hidden`}>
+		<section ref={container} className={`${styles.about} h-[130vh] lg:h-[200vh] overflow-hidden bg-skin-base`}>
 			<div className='text-white font-trirong font-black text-4xl lg:text-7xl mx-auto my-16 max-w-[1200px]'>
 				<h1 className='relative inline-flex overflow-hidden'>
 					<motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}  className=''>Artisans, Esthétiques</motion.span>

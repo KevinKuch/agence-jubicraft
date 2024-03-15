@@ -6,6 +6,7 @@ import SectionImage from './_components/sectionImage';
 import SectionAbout from './_components/sectionAbout';
 import SectionExpertise from './_components/sectionExpertise';
 import { useEffect } from 'react';
+import Transition from '@/components/transition';
 
 
 
@@ -23,11 +24,13 @@ export default function Accueil() {
   }, []) 
 
 	return (
-		<section className={`${styles.accueil}`}>
-			<Hero />
-			<SectionImage />
-			<SectionAbout />
-			<SectionExpertise />
-		</section>
+		<Transition>
+			<section className={`${styles.accueil}`}>
+				<Hero />
+				<SectionImage />
+				<SectionAbout />
+				<SectionExpertise />
+			</section>
+		</Transition>
 	)
 }

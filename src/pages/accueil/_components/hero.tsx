@@ -50,7 +50,7 @@ export default function Hero() {
 	};
 
 	return (
-    <div className={`${styles.main} min-h-screen w-full pt-[8rem] relative text-white`}>
+    <div className={`${styles.main} min-h-screen w-full pt-[8rem] relative bg-skin-base text-white`}>
         <div className="flex flex-col justify-center pt-2 pl-12 lg:mx-12">
 				<motion.div variants={variant1} initial="hidden" animate="visible" className="text-container relative">
 					<motion.div className="overflow-hidden">
