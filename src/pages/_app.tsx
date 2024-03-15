@@ -18,9 +18,11 @@ export default function App({ Component, pageProps, router }: MyAppProps) {
   return (
     <div className="main">
       <Navbar />
-      <AnimatePresence mode='wait'>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+      <div className="">
+        <AnimatePresence mode='wait'>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </div>
       <Footer/>
     </div>
   )

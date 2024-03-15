@@ -4,3 +4,10 @@ export interface unProjetCard {
 	currentSlug: string;
 	titleImage: any;
 }
+
+export interface unProjetInfo {
+	currentSlug: string;
+	title: string;
+	content: string;
+	titleImage: any;
+}

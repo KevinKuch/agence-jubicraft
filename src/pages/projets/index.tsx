@@ -1,10 +1,11 @@
 import Transition from "@/components/transition";
 import Image from "next/image";
-import { unProjetCard } from "@/libs/interface";
-import { client, urlFor } from "@/libs/sanity";
+import { unProjetCard } from "../../libs/interface";
+import { client, urlFor } from "../../libs/sanity";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
 
 export default function Projets({ data }: { data: unProjetCard[] }) {
 	
@@ -16,7 +17,7 @@ export default function Projets({ data }: { data: unProjetCard[] }) {
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mx-12">
           {data.map((project, index) => (
-            <Card key={index} className="flex flex-col justify-center items-center p-4 bg-skin-secondary rounded-xl">
+            <Card key={index} className="flex flex-col justify-center items-center p-4 bg-skin-secondary rounded-xl max-w-[800px]">
 							<Image
 								src={urlFor(project.titleImage).url()} // Use project titleImage from fetched data
 								alt={project.title}
@@ -28,7 +29,7 @@ export default function Projets({ data }: { data: unProjetCard[] }) {
 								<h2 className="text-2xl font-semibold font-heebo text-center">{project.title}</h2>
 								<p className="line-clamp-3">{project.overview}</p>
 								<Button asChild className="w-full mt-7">
-									<Link href={`/projets/${project.currentSlug}`}>En savoir plus</Link>
+									<Link href={`/projetInfo/${project.currentSlug}`}>En savoir plus</Link>
 								</Button>
 							</CardContent>
             </Card>
