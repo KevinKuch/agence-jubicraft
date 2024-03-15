@@ -7,6 +7,7 @@ import { Router } from 'next/router';
 
 import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 interface MyAppProps extends AppProps {
   router: Router;
@@ -22,6 +23,9 @@ export default function App({ Component, pageProps, router }: MyAppProps) {
       <AnimatePresence mode='wait'>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

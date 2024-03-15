@@ -5,6 +5,7 @@ import  Hero  from './_components/hero';
 import SectionImage from './_components/sectionImage';
 import SectionAbout from './_components/sectionAbout';
 import { useEffect } from 'react';
+import SectionExpertise from './_components/sectionExpertise';
 
 
 
@@ -26,6 +27,7 @@ export default function Accueil() {
 			<Hero />
 			<SectionImage />
 			<SectionAbout />
+			<SectionExpertise />
 		</section>
 	)
 }
