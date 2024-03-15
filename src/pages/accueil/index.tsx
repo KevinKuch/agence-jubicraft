@@ -1,5 +1,5 @@
 import styles from '@/pages/accueil/styles.module.scss';
-import { Hero } from './_components/hero';
+import  Hero  from './_components/hero';
 
 
 

@@ -4,7 +4,7 @@ import styles from "@/pages/accueil/styles.module.scss";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export const Hero = () => {
+export default function Hero() {
 
 	const variant1 = {
 		// On définit les propriétés de l'animation 
