@@ -11,7 +11,6 @@ const telex = Telex({
 	weight: ['400'], 
 });
 
-
 export default function Home() {
   return (
     <>
