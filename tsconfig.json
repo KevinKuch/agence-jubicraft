@@ -19,6 +19,6 @@
       "@/styles/*": ["./src/styles/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/transition/index.jsx", "src/components/transition/index.js"],
   "exclude": ["node_modules"]
 }
