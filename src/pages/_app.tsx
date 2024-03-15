@@ -14,16 +14,6 @@ interface MyAppProps extends AppProps {
 
 export default function App({ Component, pageProps, router }: MyAppProps) {
 
-  useEffect( () => {
-    (
-      async () => {
-        //@ts-ignore
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
-      }
-    )()
-  }, []) 
-
   return (
     <div className="main">
       <header>
