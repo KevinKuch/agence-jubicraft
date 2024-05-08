@@ -1,33 +1,8 @@
 //HERO PAGE
 
 .main {
-	overflow-x : hidden;
-
-	.bigText {
-		font-size: 2rem;
-		font-size: clamp(2rem, 0.8rem + 6vw, 8rem);
-	}
-
-	.secondText {
-		font-size: 1.5rem;
-		font-size: clamp(1.5rem, 0.6000000000000001rem + 4.5vw, 6rem);
-	}
-
-	.subText {
-		font-size: 1rem;
-		font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
-		text-align: center;
-	}
-
-	.placeText {
-		font-size: 0.6rem;
-		font-size: clamp(0.6rem, 0.49473684210526314rem + 0.5263157894736842vw, 1rem);
-	}
-
-
+	
 }
-
-
 
 // SECTION 2
 .container {
@@ -55,47 +30,44 @@
 			width: 25vw;
 			height: 25vh;
 			position: relative;
-			
 
 			img {
 				object-fit: cover;
-				
 			}
 		}
 		&:nth-of-type(4) {
 			.imageContainer {
-				top:35vh;
-				left:5vw;
+				top: 35vh;
+				left: 5vw;
 				width: 35vw;
 				height: 35vh;
 			}
 		}
 		&:nth-of-type(3) {
 			.imageContainer {
-				top:-8vh;
-				left:-25vw;
+				top: -8vh;
+				left: -25vw;
 				width: 20vw;
 				height: 25vh;
 			}
 		}
 		&:nth-of-type(2) {
 			.imageContainer {
-				top:-28vh;
-				left:0;
+				top: -28vh;
+				left: 0;
 				width: 20vw;
 				height: 25vh;
 			}
 		}
 		&:nth-of-type(5) {
 			.imageContainer {
-				top:-5vh;
-				left:25vw;
+				top: -5vh;
+				left: 25vw;
 				width: 20vw;
 				height: 25vh;
 			}
 		}
 	}
-
 }
 
 //About
@@ -118,10 +90,9 @@
 			width: 25vw;
 			height: 25vh;
 			position: relative;
-			
+
 			img {
 				object-fit: cover;
-				
 			}
 
 			&:nth-of-type(1) {
@@ -129,8 +100,8 @@
 				right: -34vw;
 				height: 40vh;
 				width: 40vw;
-				
-				@media screen and (min-width:1024px) {
+
+				@media screen and (min-width: 1024px) {
 					top: 46vh;
 					right: -35vw;
 					height: 40vh;
@@ -144,7 +115,7 @@
 				height: 45vh;
 				width: 45vw;
 
-				@media screen and (min-width:1024px) {
+				@media screen and (min-width: 1024px) {
 					top: -1vh;
 					height: 90vh;
 					width: 38vw;
@@ -164,38 +135,35 @@
 
 	.expertiseDes {
 		display: flex;
-    height: 800px;
-    gap: 5%;
-    width: 100%;
-    justify-content: space-between;
-
+		height: 800px;
+		gap: 5%;
+		width: 100%;
+		justify-content: space-between;
 
 		.imageContainer {
 			position: relative;
 			width: 40%;
 			height: 100%;
-			
 		}
 
 		.imageContainer img {
-			object-fit:cover;
+			object-fit: cover;
 		}
 	}
 
 	.column {
 		display: flex;
 		margin-top: 1rem;
-    width: 25%;
+		width: 25%;
 
-    &:last-of-type {
-        align-items: center;
-    }
-}
-
+		&:last-of-type {
+			align-items: center;
+		}
+	}
 
 	.expertiseList {
-    display: flex;
-    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 
 		&:last-of-type {
 			border-bottom: 1px solid white;

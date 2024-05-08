@@ -19,10 +19,20 @@ body,
   margin: 0;
 }
 
+h1 {
+  font-family: 'Heebo', serif;
+  font-weight: 600;
+  font-size: 4rem;
+  color: var(--color-text-white);
+}
+
+p {
+  font-size: 1.2rem;
+}
 
 @layer base {
   :root {
-    --color-text-base: #ffff;
+    --color-text-white: #F2E6ED;
     --color-primary: #FDD3F7;
     --color-secondary:#9A3A6C;
     --color-accent: #E4E3FC;

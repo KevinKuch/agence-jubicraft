@@ -25,7 +25,7 @@ export default function Accueil() {
 
 	return (
 		<Transition>
-			<section className={`${styles.accueil}`}>
+			<section className="page">
 				<Hero />
 				<SectionImage />
 				<SectionAbout />

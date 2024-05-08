@@ -23,7 +23,7 @@ export default function App({ Component, pageProps, router }: MyAppProps) {
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

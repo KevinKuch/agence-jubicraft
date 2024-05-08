@@ -28,7 +28,7 @@ const config: Config = {
 			},
 			textColor: {
 				skin: {
-					base: 'var(--color-text-base)',
+					base: 'var(--color-text-white)',
 					primary: 'var(--color-text-primary)',
 					secondary: 'var(--color-text-secondary)',
 					third: 'var(--color-text-third)',
