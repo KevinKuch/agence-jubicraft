@@ -25,12 +25,12 @@ export default function Accueil() {
 
 	return (
 		<Transition>
-			<section className="page">
+			<main className="page">
 				<Hero />
 				<SectionImage />
 				<SectionAbout />
 				<SectionExpertise />
-			</section>
+			</main>
 		</Transition>
 	)
 }

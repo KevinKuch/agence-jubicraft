@@ -19,23 +19,51 @@ body,
   margin: 0;
 }
 
-h1 {
+h1, .h1 {
   font-family: 'Heebo', serif;
   font-weight: 600;
   font-size: 4rem;
   color: var(--color-text-white);
 }
 
-p {
-  font-size: 1.2rem;
+h2, .h2 {
+  font-family: 'Heebo', serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--color-text-white);
+}
+
+p, a {
+  font-size: clamp(1.1rem, 0.924rem + 0.751vw, 1.6rem);
+  color: var(--color-text-white);
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 @layer base {
   :root {
     --color-text-white: #F2E6ED;
-    --color-primary: #FDD3F7;
-    --color-secondary:#9A3A6C;
-    --color-accent: #E4E3FC;
+    --color-text-red: #810947;
+    --color-primary:#9A3A6C;
+    --color-accent: #F2E6ED;
     --background-custom: #810947;
 
   }

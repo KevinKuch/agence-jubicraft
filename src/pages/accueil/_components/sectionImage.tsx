@@ -73,7 +73,7 @@ export default function SectionImage() {
 ]
 
 	return ( 
-		<div ref={container} className={`${styles.container} h-300 bg-skin-secondary`}>
+		<div ref={container} className={`${styles.container} h-300 bg-skin-primary`}>
 			<div className={styles.sticky}>
 				{
 					// On map les images pour les afficher

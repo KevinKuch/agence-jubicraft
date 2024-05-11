@@ -6,7 +6,7 @@ const Logo = () => {
 			{/* Utilise le logo noir en theme clair */}
 			<Image 
 				className="cursor-pointer"
-				src="/jc-logo.svg" 
+				src="/jc-logo-dark.svg" 
 				height="200"
 				width="200" 
 				alt="Jubilee Craft Logo" 

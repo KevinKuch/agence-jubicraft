@@ -1,3 +1,118 @@
+.menuBar,
+.menuOverlayBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.menuBar a,
+.menuOpen p {
+  color: black;
+  cursor: pointer;
+}
+
+.menuClose p {
+  color: var(--color-text-white);
+  cursor: pointer;
+}
+
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  background: var(--color-accent);
+  z-index: 2;
+  display: flex;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menuCloseIcon {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menuCopy {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.menuPreview {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menuCloseIcon p {
+  font-size: 100px;
+  color: var(--color-text-red);
+  line-height: 70%;
+}
+
+.menuLinkItem {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menuLinkItemHolder {
+  position: relative;
+}
+
+.menuLinkItemHolder a {
+  color: var(--color-text-red);
+  font-size: 8rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+}
+
+.menuInfo {
+  display: flex;
+}
+
+.menuInfoCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p, a {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 150%;
+    color: var(--color-text-red);
+  }
+}
+
+@media (max-width: 900px) {
+  .menuCloseIcon {
+    display: none;
+  }
+
+  .menuCopy {
+    padding-top: 8em;
+  }
+
+  .menuLinkItemHolder a {
+    font-size: 5rem;
+  }
+}
+
+
 .footerConditions {
 	
 	font-size: 0.6rem;

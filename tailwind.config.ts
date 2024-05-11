@@ -29,9 +29,10 @@ const config: Config = {
 			textColor: {
 				skin: {
 					base: 'var(--color-text-white)',
+					red: 'var(--color-text-red)',
 					primary: 'var(--color-text-primary)',
 					secondary: 'var(--color-text-secondary)',
-					third: 'var(--color-text-third)',
+					accent: 'var(--color-text-accent)',
 				}
 			},
 			backgroundColor: {
@@ -39,7 +40,7 @@ const config: Config = {
 					base: 'var(--background-custom)',
 					secondary: 'var(--color-secondary)',
 					primary: 'var(--color-primary)',
-					third: 'var(--color-third)',
+					accent: 'var(--color-accent)',
 				}
 			},
 		},
