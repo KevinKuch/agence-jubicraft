@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Hero() {
 	// State pour stocker la taille de l'image
@@ -42,6 +43,7 @@ export default function Hero() {
 
   const heroImage = useRef(null);
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from(heroImage.current, {
       scrollTrigger: {
         trigger: heroImage.current,
