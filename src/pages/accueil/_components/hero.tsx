@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { motion, useInView } from 'framer-motion';
 
 export default function Hero() {
 	// State pour stocker la taille de l'image
@@ -53,12 +54,18 @@ export default function Hero() {
         scrub: 1,
       },
       scale: 1.5,
-      y: 100,
     });
   });  
 
   const title = "JubileeCraft";
   const text = useRef(null);
+  const container = useRef(null);
+  const isInView = useInView(container); //framer-motion hook
+  const slideUpText = {
+		initial: {y: "100%"},
+		animate: (i: number) => ({y: 0 , transition: {duration: 0.8, delay: i * 0.04}, delay:5}),
+		hidden: {y: "100%"}
+	}
 
 	return (
 		<section className={`${styles.hero} relative h-[120vh] lg:h-[175vh]`}>
@@ -73,12 +80,17 @@ export default function Hero() {
 				/>
 			</div>
 
-			<div className="hero-heading absolute top-0 left-0 h-[50%] mt-32 w-full">
+			<div ref={container} className="hero-heading absolute top-0 left-0 h-[50%] mt-32 w-full">
 				<div className="hero-top">
-					<h1 className="tracking-wide w-full text-[16vw] px-2 text-center" ref={text}>
-						JubileeCraft
+					<h1 data-scroll data-scroll-speed="0.1" className="tracking-wide w-full text-[16vw] px-2 text-center" ref={text}>
+          {
+						// Fonction JS pour séparer les mots et les animer. Chaque mot est un span
+						title.split("").map((letter, index) => {
+							return <span key={index} className="relative inline-flex overflow-hidden"><motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"} custom={index}>{letter}</motion.span></span>
+						})
+					}
 					</h1>
-					<div className="hero-top__description flex flex-col items-start mx-10 max-w-[60%] lg:max-w-[30%]">
+					<div data-scroll data-scroll-speed="0.2" className="hero-top__description flex flex-col items-start mx-10 max-w-[60%] lg:max-w-[30%]">
 						<p className="pt-10">
 							Donnez vie à la créativité de vos évènement avec des designs,
 							notre visionnement impeccable
@@ -94,7 +106,7 @@ export default function Hero() {
 					</div>
 				</div>
 
-				<div className="hero-bottom mx-5 mt-28 flex flex-col justify-center items-center">
+				<div data-scroll data-scroll-speed="0.7" className="hero-bottom mx-5 mt-44 flex flex-col justify-center items-center">
 					<h2 className="text-white text-center pb-10 text-[4vw]">
 						Agence de création évènementielle
 					</h2>
