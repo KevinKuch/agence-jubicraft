@@ -20,9 +20,9 @@ export default function SectionExpertise() {
     // Animation GSAP sur les listes items de l'expertise
     // Utilisation de useRef pour cibler les éléments à animer
     // Apparition des items un par un
-    const list = useRef(null);
-	const title = useRef(null);
-    const image = useRef(null);
+    const list = useRef<HTMLUListElement>(null);
+	const title = useRef<HTMLHeadingElement>(null);
+    const image = useRef<HTMLDivElement>(null);
     useGSAP(() => {
         gsap.from(title.current, {
             opacity: 0,
@@ -34,17 +34,19 @@ export default function SectionExpertise() {
                 end: "bottom bottom",
             }
         });
-        gsap.from(list.current.children, {
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: list.current,
-                start: "top bottom-=80",
-                end: "bottom bottom",
-            }
-        });
+        if (list.current) {
+            gsap.from(list.current.children as any, {
+                opacity: 0,
+                y: 100,
+                duration: 1,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: list.current,
+                    start: "top bottom-=80",
+                    end: "bottom bottom",
+                }
+            });
+        }
         gsap.to(image.current, {
 			yPercent: 100,
 			duration: 1.2,
