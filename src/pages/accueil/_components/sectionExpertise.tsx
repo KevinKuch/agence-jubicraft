@@ -1,91 +1,82 @@
-"use client";
-
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Import ScrollTrigger
 import styles from "@/pages/accueil/styles.module.scss";
-import { useRef, useState } from 'react';
-import Image from 'next/image'
-
-import gsap from 'gsap'
-import { useGSAP } from "@gsap/react"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { motion, useInView } from 'framer-motion';
-
+import Image from "next/image";
+import expertiseImage from "@/public/expertise-img.svg";
+import arrowRight from "@/public/arrow-right.svg";
+import { useGSAP } from "@gsap/react";
+import { useRef } from 'react';
 
 export default function SectionExpertise() {
+    const expertiseItems = [
+        "Conception et création",
+        "Production et animation",
+        "Identité visuelle et design",
+        "Divertissement et immersif",
+        "Stratégie et campagne"
+    ];
 
-	const events = [
-		{
-				title: "Conception et création",
-				src: "music-concert-unsplash.jpg"
-		},
-		{
-				title: "Production et animation",
-				src: "couleur-art-unsplash.jpg"
-		},
-		{
-				title: "Identité visuelle et design",
-				src: "glacier-unsplash.jpg"
-		},
-		{
-				title: "Animation et divertissement",
-				src: "camping-unsplash.jpg"
-		},
-	]
+    // Animation GSAP sur les listes items de l'expertise
+    // Utilisation de useRef pour cibler les éléments à animer
+    // Apparition des items un par un
+    const list = useRef(null);
+	const title = useRef(null);
+    const image = useRef(null);
+    useGSAP(() => {
+        gsap.from(title.current, {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            scrollTrigger: {
+                trigger: title.current,
+                start: "top bottom-=80",
+                end: "bottom bottom",
+            }
+        });
+        gsap.from(list.current.children, {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: list.current,
+                start: "top bottom-=80",
+                end: "bottom bottom",
+            }
+        });
+        gsap.to(image.current, {
+			yPercent: 100,
+			duration: 1.2,
+			scrollTrigger: {
+				trigger: image.current,
+				start: "top center",
+				end: "bottom bottom",
+			}
+		});
+    });
 
-		const [hoverEvents, setHoverEvents] = useState(0);
-    const imageContainer = useRef(null);
-		const expertiseSection = useRef(null);
-
-		useGSAP(() => {
-			gsap.registerPlugin(ScrollTrigger);
-			ScrollTrigger.create({
-				trigger: imageContainer.current,
-				start: '-350px',
-				end: '.expertise',
-				pin: true,
-				// markers: true,
-			})
-		})
-
-		const container = useRef(null);
-		const isInView = useInView(container); //framer-motion hook
-
-		const slideUpText = {
-			initial: {y: "100%"},
-			animate: (i: number) => ({y: 0 , transition: {duration: 0.4, delay: i * 0.02}}),
-			hidden: {y: "100%"}
-		}
-
-
-	return ( 
-		<section ref={expertiseSection} className={`${styles.expertise} h-[120vh] w-full pb-12 bg-skin-secondary text-white`}>
-			<div ref={container}>
-				<h1 className="font-trirong font-black text-4xl lg:text-7xl max-auto my-16 max-w-[1200px relative inline-flex overflow-hidden"><motion.span variants={slideUpText} initial="initial" animate={isInView ? "animate" : "hidden"}>Nos Expertise</motion.span></h1>
-			</div>
-			<div className={`${styles.expertiseDes}`}>
-				<div ref={imageContainer} className={`${styles.imageContainer} hidden md:block`}>
-					<Image
-						src={`/${events[hoverEvents].src}`}
-						fill={true}
-						alt={events[hoverEvents].title}
-					/>
-				</div>
-				<div data-scroll data-scroll-speed="0.1" className={`${styles.column}  md:text-xl lg:text-2xl`}>
-					<p>Jubilee Craft excelle dans la planification stratégique d&apos;événements, offrant des festivals immersifs où chaque détail est méticuleusement façonné pour captiver vos participants.</p>
-        </div>
-				<div data-scroll data-scroll-speed="0.2" className={`${styles.column}  md:text-xl lg:text-2xl`}>
-					<p>Jubilee Craft, plongez dans l&apos;univers des festivals exceptionnels, où la créativité fusionne avec une exécution impeccable, créant ainsi des moments magiques et des souvenirs durables.</p>
-				</div>
-			</div>
-			<div className={`${styles.expertiseList} lg:pt-[4rem] lg:mb-[12rem]`}>
-				{
-					events.map((event, index) => {
-						return <div onMouseOver={() => {setHoverEvents(index)}} className={`${styles.expertiseEl} flex justify-start border-t  uppercase font-black cursor-pointer md:justify-end`} key={`p_${index}`}>
-							<p className={`${styles.expertTitle} text-xl p-4 md:text-2xl lg:text-3xl`}>{event.title}</p>
-							</div>
-					})
-				}
-			</div>
-		</section>
-	 );
+    return (
+        <section className={`${styles.sectionExpertise} bg-skin-base px-5 py-20`}>
+            <div className="container max-w-[1440px]">
+                <h1 ref={title} className={`${styles.title} pb-[20px] md:pb-[40px] font-semibold text-4xl md:text-5xl`}>Nos Expertise</h1>
+                <div className={`${styles.containerCol} flex flex-col lg:flex-row lg:gap-5 lg:items-center lg:justify-between`}>
+                    <div className={`${styles.image} order-last lg:order-first mx-auto pt-20 lg:pt-0 lg:mx-0 lg:pt-10 relative overflow-hidden`}>
+                    <div ref={image} className={`${styles.overlay} absolute top-0 left-0 w-full h-full bg-skin-base opacity-100 z-10`}></div>
+                        <Image src={expertiseImage} alt="image-expertise" />
+                    </div>
+                    <div className={`${styles.listWrapper}`}>
+                        <ul ref={list} className={`${styles.items} text-skin-base text-xl md:text-2xl lg:text-4xl pt-10`}>
+                            {expertiseItems.map((item, index) => (
+                                <li key={index} className="flex gap-8 items-center border-b border-opacity-50 pb-4 pt-4 tracking-wider lg:pb-6 lg:pr-6">
+                                    <Image src={arrowRight} alt="arrow-right" className="w-[3rem] transition-transform hover:translate-x-3"/>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
- 

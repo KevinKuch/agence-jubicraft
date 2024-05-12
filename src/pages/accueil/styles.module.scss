@@ -9,7 +9,7 @@
 			width: 100%;
 			height: 100%;
 			position: absolute;
-			background: linear-gradient(180deg, rgba(108,31,98,0.7318902905198776) 0%, rgba(108,31,98,0.5973337155963303) 53%, rgba(193,142,195,0.38632454128440363) 100%);
+			background: linear-gradient(180deg, rgba(129,9,71,0.8029586834733894) 0%, rgba(129,9,71,0.500437675070028) 100%);
 
 
 		}
@@ -133,52 +133,6 @@
 					width: 38vw;
 				}
 			}
-		}
-	}
-}
-
-// Expertise
-
-.expertise {
-	display: flex;
-	flex-direction: column;
-	padding: 0 clamp(4rem, 12vw, 20rem);
-	// padding: 10%;
-
-	.expertiseDes {
-		display: flex;
-		height: 800px;
-		gap: 5%;
-		width: 100%;
-		justify-content: space-between;
-
-		.imageContainer {
-			position: relative;
-			width: 40%;
-			height: 100%;
-		}
-
-		.imageContainer img {
-			object-fit: cover;
-		}
-	}
-
-	.column {
-		display: flex;
-		margin-top: 1rem;
-		width: 25%;
-
-		&:last-of-type {
-			align-items: center;
-		}
-	}
-
-	.expertiseList {
-		display: flex;
-		flex-direction: column;
-
-		&:last-of-type {
-			border-bottom: 1px solid white;
 		}
 	}
 }

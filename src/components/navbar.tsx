@@ -57,6 +57,7 @@ const Menu = () => {
       tl.current.reverse();
     }
   }, [isMenuOpen]);
+  
 	
 	return (
     <div className="menu-container" ref={container}>

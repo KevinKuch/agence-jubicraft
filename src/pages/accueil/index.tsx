@@ -27,9 +27,9 @@ export default function Accueil() {
 		<Transition>
 			<main className="page">
 				<Hero />
-				<SectionImage />
 				<SectionAbout />
 				<SectionExpertise />
+				<SectionImage />
 			</main>
 		</Transition>
 	)
