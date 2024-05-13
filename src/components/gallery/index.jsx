@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
 
+// Images pour la gallerie
 const images = [
   "1.jpg",
   "2.jpg",
