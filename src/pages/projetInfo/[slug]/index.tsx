@@ -32,7 +32,7 @@ export default function UnProjetInfo({ data }: { data: unProjetInfo }) {
 					className="rounded-lg mt-8 border mx-auto"
 				/>
 
-				<div className="mt-16 text-center">
+				<div className="mt-16 text-center pb-24">
 					{/* @ts-ignore */}
 					<PortableText className="" value={data.content} />
 				</div>

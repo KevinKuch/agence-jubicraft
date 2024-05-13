@@ -61,14 +61,14 @@ const Menu = () => {
   
 	
 	return (
-    <div className="menu-container" ref={container}>
+    <div className="menu-container z-[1000]" ref={container}>
       {/* menu-bar */}
       <div className={`${styles.menuBar} bg-skin-accent`}>
         <div className={`${styles.menuLogo}`}>
           <Link href="/"><Logo /></Link>
         </div>
         <div className={`${styles.menuOpen}`} onClick={toggleMenu}>
-          <span className="text-skin-red font-telex font-semibold">Menu</span>
+          <span className="text-skin-red font-telex font-semibold cursor-pointer">Menu</span>
         </div>
       </div>
 
@@ -80,7 +80,7 @@ const Menu = () => {
             <Link href="/"><Logo /></Link>
           </div>
           <div className={`${styles.menuClose}`}>
-            <span className="text-skin-red font-telex font-semibold" onClick={toggleMenu}>Close</span>
+            <span className="text-skin-red font-telex font-semibold cursor-pointer" onClick={toggleMenu}>Close</span>
           </div>
         </div>
 

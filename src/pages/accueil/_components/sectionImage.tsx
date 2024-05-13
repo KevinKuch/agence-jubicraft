@@ -82,22 +82,20 @@ const { scrollYProgress } = useScroll({
 	]	
 	useEffect(() => {
     // Ensure ScrollTrigger is only added once
-    if (typeof window !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-    }
+		gsap.registerPlugin(ScrollTrigger);
 
     // Animation gsap pour ouvrir et fermer les overlay avec scrolltrigger
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container.current,
         start: 'top center',
-        end: 'top top-=10%', 
+        end: 'top top+=10%', 
         scrub: true, 
         // markers: true 
       }
     });
-    tl.to('.overlay.left', { x: '-100%', duration: 1 }, 0)
-      .to('.overlay.right', { x: '100%', duration: 1 }, 0);
+    tl.to('.overlay.left', { width: 0, duration: 1 }, 0)
+      .to('.overlay.right', { width: 0, duration: 1 }, 0);
 
     // Tuer l'animation pour éviter les fuites de mémoire
     return () => {
@@ -111,11 +109,11 @@ const { scrollYProgress } = useScroll({
 		<div ref={container} className={`${styles.container} h-300 bg-skin-primary`}>
 
 			{/* Overlay qui permet de faire l'ouverture ou fermature */}
-			<div className="overlay left absolute top-0 left-0 w-1/2 h-full bg-skin-base z-[60]"></div>
-      <div className="overlay right absolute top-0 right-0 w-1/2 h-full bg-skin-base z-[60]"></div>
+			<div className="overlay left absolute top-0 left-0 w-1/2 h-full bg-skin-base z-[1] overflow-hidden"></div>
+      <div className="overlay right absolute top-0 right-0 w-1/2 h-full bg-skin-base z-[1] overflow-hidden"></div>
 
 			<div className={styles.sticky}>
-				<Link href="/project">
+				<Link href="/projets">
 					<motion.h2  style={{ scale: scaleHeading }} className="absolute right-50 left-[30%] translate-x-[-50%] top-96 lg:right-50 lg:left-[43%] lg:translate-x-[-50%] lg:top-80 z-[100] underline font-bold">Voir nos projets</motion.h2>
 				</Link>
 				{
