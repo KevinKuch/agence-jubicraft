@@ -49,11 +49,10 @@ export default function Hero() {
 	// Hook GSAP pour animer l'image du héros seulement si la largeur de la fenêtre est supérieure à 768px
 	useGSAP(() => {
 		if (window.innerWidth > 768) {
-			// Check if viewport width is greater than 768px
+			//Vérifier le viewport width est plus grand que 768px
 			gsap.registerPlugin(ScrollTrigger);
 			const tl = gsap.timeline();
-			tl.fromTo(
-				heroImage.current,
+			tl.fromTo(heroImage.current,
 				{
 					yPercent: 20,
 					scale: 1.5,
@@ -65,8 +64,7 @@ export default function Hero() {
 					ease: "power4.inOut",
 				}
 			);
-			tl.add(() => {
-				gsap.fromTo(
+			tl.add(() => {gsap.fromTo(
 					heroImage.current,
 					{
 						scale: 1.2,
@@ -86,8 +84,7 @@ export default function Hero() {
 		}
 	});
 	useGSAP(() => {
-		gsap.fromTo(
-			heroBottom.current,
+		gsap.fromTo(heroBottom.current,
 			{
 				opacity: 0,
 				y: 50,
@@ -108,8 +105,7 @@ export default function Hero() {
 	}, []);
 
 	const title = "JubileeCraft";
-	const description =
-		"Donnez vie à la créativité de vos évènement avec des designs, notre visionnement impeccable";
+	const description = "Donnez vie à la créativité de vos évènement avec des designs, notre visionnement impeccable";
 	const text = useRef(null);
 	const container = useRef(null);
 	const isInView = useInView(container); //framer-motion hook
@@ -126,7 +122,6 @@ export default function Hero() {
 		animate: { opacity: 1, y: 0, transition: { duration: 0.35, delay: 2, easeInOut } },
 		hidden: { opacity: 0 },
 	};
-
 	return (
 		<section className={`${styles.hero} relative h-[120vh] lg:h-[175vh]`}>
 			<div
