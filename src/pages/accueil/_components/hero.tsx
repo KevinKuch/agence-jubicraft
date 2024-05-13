@@ -213,7 +213,7 @@ export default function Hero() {
 					data-scroll-speed="0.7"
 					className="hero-bottom mx-5 mt-16 flex flex-col justify-center items-center max-w-[62%] mx-auto"
 				>
-					<h2 className="text-white text-center pb-10 text-[4vw]">
+					<h2 className="text-white text-center pb-10 pt-14 text-[4vw]">
 						Agence de création évènementielle
 					</h2>
 					<div className="hero-bottom__img-wrapper flex justify-center">
