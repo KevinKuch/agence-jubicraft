@@ -20,21 +20,21 @@ body,
 }
 
 h1, .h1 {
-  font-family: 'Heebo', serif;
+  font-family: 'Trirong', serif;
   font-weight: 600;
-  font-size: 4rem;
+  font-size: clamp(2rem, 1.1197rem + 2.8169vw, 4.5rem);;
   color: var(--color-text-white);
 }
 
 h2, .h2 {
   font-family: 'Heebo', serif;
-  font-weight: 600;
-  font-size: 2.2rem;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.3239rem + 0.5634vw, 2rem);
   color: var(--color-text-white);
 }
 
 p, a {
-  font-size: clamp(1.1rem, 0.924rem + 0.751vw, 1.6rem);
+  font-size: clamp(1.125rem, 0.993rem + 0.4225vw, 1.5rem);
   color: var(--color-text-white);
 }
 

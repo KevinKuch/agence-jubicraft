@@ -59,11 +59,11 @@ export default function SectionExpertise() {
     });
 
     return (
-        <section className={`${styles.sectionExpertise} bg-skin-base px-5 py-20`}>
+        <section className={`${styles.sectionExpertise} bg-skin-base px-5 pt-20 pb-40`}>
             <div className="container max-w-[1440px]">
                 <h1 ref={title} className={`${styles.title} pb-[20px] md:pb-[40px] font-semibold text-4xl md:text-5xl`}>Nos Expertise</h1>
                 <div className={`${styles.containerCol} flex flex-col lg:flex-row lg:gap-5 lg:items-center lg:justify-between`}>
-                    <div className={`${styles.image} order-last lg:order-first mx-auto pt-20 lg:pt-0 lg:mx-0 lg:pt-10 relative overflow-hidden`}>
+                    <div className={`${styles.image} order-last lg:order-first mx-auto pt-20 lg:mx-0 lg:pt-10 relative overflow-hidden`}>
                     <div ref={image} className={`${styles.overlay} absolute top-0 left-0 w-full h-full bg-skin-base opacity-100 z-10`}></div>
                         <Image src={expertiseImage} alt="image-expertise" />
                     </div>

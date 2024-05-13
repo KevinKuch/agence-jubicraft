@@ -148,7 +148,7 @@ export default function Hero() {
 					<h1
 						data-scroll
 						data-scroll-speed="0.1"
-						className="tracking-wide w-full text-[16vw] px-2 text-center"
+						className="font-heebo tracking-wide w-full text-[16vw] px-2 text-center"
 						ref={text}
 					>
 						{

@@ -88,6 +88,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 
   p, a {
@@ -96,6 +97,13 @@
     line-height: 150%;
     color: var(--color-text-red);
   }
+}
+
+.menuLottie {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 @media (max-width: 900px) {
@@ -114,7 +122,6 @@
 
 
 .footerConditions {
-	
-	font-size: 0.6rem;
+font-size: 0.6rem;
 font-size: clamp(0.6rem, 0.52rem + 0.4vw, 1rem);
 }

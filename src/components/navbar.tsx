@@ -5,6 +5,7 @@ import styles from "./style.module.scss";
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Logo from "@/components/logo";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -101,11 +102,13 @@ const Menu = () => {
           </div>
           <div className={`${styles.menuInfo}`}>
             <div className={`${styles.menuInfoCol}`}>
-              <a href="#">X &#8599;</a>
-              <a href="#">Instagram &#8599;</a>
-              <a href="#">LinkedIn &#8599;</a>
-              <a href="#">Facebook &#8599;</a>
-              <a href="#">Youtube &#8599;</a>
+            <ul className="flex items-center gap-4">
+							<li><Image src="/facebook-icon.svg" alt="Facebook icon" width={34} height={34}/></li>
+							<li><Image src="/twitter-icon.svg" alt="Twitter icon" width={34} height={34}/></li>
+							<li><Image src="/instagram-icon.svg" alt="Instagram icon" width={34} height={34}/></li>
+							<li><Image src="/linkedin-icon.svg" alt="Linkedin icon" width={34} height={34}/></li>
+							<li><Image src="/youtube-icon.svg" alt="Youtube icon" width={36} height={36}/></li>
+						</ul>
             </div>
             <div className={`${styles.menuInfoCol}`}>
               <p>info@jubileecraft.com</p>
@@ -113,8 +116,8 @@ const Menu = () => {
             </div>
           </div>
         </div>
-        <div className={`${styles.menuPreview}`}>
-          <p>View ShowReel</p>
+        <div className={`${styles.menuLottie}`}>
+          <iframe src="https://lottie.host/embed/eb5080f1-ffcf-45ee-9451-c16f0869313c/Gk7Nwyy57u.json"></iframe>
         </div>
       </div>
     </div>
