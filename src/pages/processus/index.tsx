@@ -2,11 +2,13 @@
 
 import Transition from "@/components/transition";
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import Lenis from '@studio-freight/lenis'
 import { useScroll } from 'framer-motion';
 import styles from "@/pages/processus/styles.module.scss";
 import Card from "@/components/card/index";
 import Gallery from "@/components/gallery/index";
+import arrowRight from "@/public/arrow-right.svg";
 import { projects } from '../../components/code/data';
 
 export default function Processus() {
@@ -44,11 +46,17 @@ export default function Processus() {
 				<h1>Processus tout au long du Projet</h1>
 
 				<div className={styles.gallery}>
-					<h2 className="mt-20 mx-auto underline">1 &#41; Mes inspirations pour débuter le projet</h2>
+					<div className="gallery-title flex gap-5 pt-20">
+						<Image src={arrowRight} alt="arrow-right" className="w-[3rem] transition-transform hover:translate-x-3"/>
+						<h2 className="underline">Mes inspirations pour débuter le projet</h2>
+					</div>
 					<Gallery />
 				</div>
 				<div ref={container} className={styles.card}>
-					<h2>Quelques codes...</h2>
+					<div className="code-title flex gap-5 items-center">
+						<Image src={arrowRight} alt="arrow-right" className="w-[3rem] transition-transform hover:translate-x-3"/>
+						<h2>Quelques codes...</h2>
+					</div>
 					{
 						projects.map( (project, i) => {
 							const targetScale = 1 - ( (projects.length - i) * 0.05);
@@ -57,6 +65,9 @@ export default function Processus() {
 						})
 					}
       </div>
+			<div className="conclusion pt-24 pb-32">
+					<h1 className="text-center">! Exploration et Case study !</h1>
+			</div>
 			</section>
 		</Transition>
 		
